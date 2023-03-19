@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x] # We will deploy with only one version of node  
+        node-version: [18.x] # We will deploy with these versions of node  
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -28,9 +28,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm ci, build and test
         run: |
-          yarn ci
+          yarn ci --if-present
           yarn run build --if-present
-          yarn test      
+          yarn test --if-present
       - name: deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
