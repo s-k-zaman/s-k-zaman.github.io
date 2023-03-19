@@ -28,7 +28,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm ci, build and test
         run: |
-          yarn ci --if-present
           yarn run build --if-present
           yarn test --if-present
       - name: deploy to gh-pages
