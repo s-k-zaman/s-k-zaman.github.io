@@ -1,0 +1,22 @@
+.image_container {
+  --image-width: 246px;
+  --image-height: 320px;
+  flex-shrink: 0;
+  flex-basis: var(--image-width);
+  height: var(--image-height);
+}
+.image_border {
+  width: var(--image-width);
+  height: var(--image-height);
+}
+.image {
+  background-image: url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: var(--image-width);
+  height: var(--image-height);
+}

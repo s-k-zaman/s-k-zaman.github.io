@@ -1,14 +1,25 @@
-import { useState } from 'react'
+import About from "./components/about-me";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import IHaveBuilt from "./components/IHaveBuilt";
+import Landing from "./components/landing";
+import LeftSocial from "./components/leftSocial";
+import OtherProjects from "./components/otherProjects";
+import RightMail from "./components/rightMail";
 
 function App() {
-
-    return (
-        <div className="App flex flex-col items-center justify-center min-h-screen bg-primary">
-            <h1 className='font-minecraft font-bold text-xl capitalize text-pink-600 shadow-md border p-1 px-3 animate-pulse'>
-                under Construction
-            </h1>
-        </div>
-    )
+  return (
+    <div className=" relative px-10 min-h-screen bg-primary">
+      <Header />
+      <LeftSocial />
+      <RightMail />
+      <Landing />
+      <About />
+      <IHaveBuilt />
+      <OtherProjects />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

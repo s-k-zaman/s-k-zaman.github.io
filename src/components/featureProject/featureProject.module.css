@@ -1,0 +1,9 @@
+.featured:hover > :nth-child(1) > :nth-child(1) {
+  background-color: transparent;
+}
+.featured_normal:hover > :nth-child(2) > :nth-child(2) {
+  transform: translateX(33%);
+}
+.featured_reversed:hover > :nth-child(2) > :nth-child(2) {
+  transform: translateX(-33%);
+}
