@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         minecraft: ["minecraft"],
         poppins: ["Poppins", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       colors: {
         primary: {
@@ -24,8 +25,11 @@ module.exports = {
         glow: "0px 5px 20px 2px rgba(139, 236, 233, 0.10)",
       },
       backgroundImage: {
-        "fearured-test":
+        "featured-readease": "url('/featured/readease.png')",
+        "featured-test":
           "url('https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
+        "featured-netflix":
+          "url('https://images.unsplash.com/photo-1637363990764-de84fd247b7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
       },
     },
   },

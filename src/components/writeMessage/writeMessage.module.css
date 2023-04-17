@@ -1,0 +1,20 @@
+.open_from_top {
+  --bbArrowSize: 2rem;
+  position: relative;
+  margin-bottom: var(--bbArrowSize);
+  /* animation */
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+.open_from_top::before {
+  --width: calc(var(--bbArrowSize) / 2 * 3.5);
+  content: "";
+  position: absolute;
+  background: inherit;
+  height: var(--bbArrowSize);
+  width: var(--width);
+  bottom: calc(100% - 2px);
+  left: calc(50% - var(--width) / 2);
+  clip-path: polygon(12.5% 100%, 50% 0, 87.5% 100%);
+}

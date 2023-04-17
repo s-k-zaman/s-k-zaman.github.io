@@ -7,39 +7,33 @@ function OtherProjects() {
   return (
     <Showcase>
       <TitleSecondary title="Other Noteworthy Projects">
-        <div className="flex flex-col gap-[20px]">
+        <div id="other-projects" className="flex flex-col gap-[20px]">
           <div className="flex justify-between gap-[10px] [&>*]:flex-1">
             <OtherProject
-              tools={["Next.js", "Tailwind CSS", "Firebase"]}
-              github="this"
-              website="link"
+              title="E-commerce Platform"
+              tools={["Laravel", "Javascript", "MySQL", "sass"]}
+              description="Developed high traffic custom e-commerce web application via
+              Laravel framework, HTML5, CSS3/SASS, JavaScirpt/React,
+              MySQL and Elastic Search."
             />
             <OtherProject
-              tools={["Next.js", "Tailwind CSS", "Firebase"]}
-              github="this"
-              website="link"
+              title="HackerNews Scraper"
+              description="A Python scraper for HackerNews that provides news with
+            more than 100 votes including the links of the news source."
+              tools={["python", "https", "BeautifulSoup"]}
             />
             <OtherProject
-              tools={["Next.js", "Tailwind CSS", "Firebase"]}
-              github="this"
-              website="link"
+              title="XVG to CSV"
+              description="A simple script to convert gromacs(used in molecular simulation) output file ie.XVG to csv files"
+              tools={["python", "numpy", "argparse"]}
+              github="https://github.com/s-k-zaman/xvg-to-csv"
             />
           </div>
-          <div className="flex justify-between gap-[10px] [&>*]:flex-[1/3]">
-            <OtherProject
-              tools={["Next.js", "Tailwind CSS", "Firebase"]}
-              github="this"
-              website="link"
-            />
-            <OtherProject
-              tools={["Next.js", "Tailwind CSS", "Firebase"]}
-              website="link"
-              github="this"
-            />
-          </div>
+          {/* Show button for more projects than 5 */}
+          {/*           
           <div className="mx-auto mt-[20px]">
             <Btn name="Show More" primary />
-          </div>
+          </div> */}
         </div>
       </TitleSecondary>
     </Showcase>

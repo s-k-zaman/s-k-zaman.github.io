@@ -4,22 +4,28 @@ import classes from "./about.module.css";
 
 function About() {
   return (
-    <Showcase>
+    <Showcase id="about-me">
       <TitleWithBar title="About me">
         <div className="flex flex-row gap-11">
           <div className="basis-full flex flex-col justify-start gap-10">
-            <p>
-              Hello! My name is Sk Khairul zaman and I enjoy creating things
-              that live on the internet. My interest in web development started
-              back in 2012 when I decided to try editing custom Tumblr themes —
-              turns out hacking together a custom relog button taught me a lot
-              about HTML & CSS!
+            <p className="text-justify">
+              I take pride in my detail-oriented approach to writing clean and
+              maintainable code that adheres to best practices and standards. As
+              an individual dedicated to self-improvement, I constantly strive
+              to improve my skills and keep up with the latest technologies and
+              trends.
+              <br />I enjoy collaborating with others to achieve high-quality
+              outcomes and recognized for my effective communication and
+              positive approach.
             </p>
-            <p>
+            <p className="text-slate-300/90">
               Here are a few technologies I’ve been working with recently:
-              consequuntur magnam neque veniam saepe animi laborum laudantium
-              voluptate molestias fuga, minima, officiis ipsam repellendus et
-              cupiditate? Iure.
+              <div className="font-montserrat mt-1 flex flex-wrap [&>*]:w-[40%] items-center justify-center">
+                <li>NextJs</li>
+                <li>Typescript</li>
+                <li>ReactJs</li>
+                <li>tailwindCSS</li>
+              </div>
             </p>
           </div>
           <div className={`relative w-full h-full ${classes.image_container}`}>

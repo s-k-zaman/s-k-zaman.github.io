@@ -31,7 +31,13 @@ function FeatureProject(props: Props) {
           `basis-[55%] shrink-0 ${props.imgClass} bg-cover bg-center`
         )}
       >
-        <div className="w-full h-full bg-primary-text/25 backdrop-brightness-75 cursor-pointer transition-all" />
+        {props.website ? (
+          <a href={props.website} target="_blank">
+            <div className="w-full h-full bg-primary-text/25 backdrop-brightness-75 transition-all"></div>
+          </a>
+        ) : (
+          <div className="w-full h-full bg-primary-text/25 backdrop-brightness-75 transition-all" />
+        )}
       </div>
       <div
         className={`basis-full font-poppins flex flex-col ${
@@ -64,12 +70,16 @@ function FeatureProject(props: Props) {
         </div>
         <div className="flex gap-[10px] text-secondary-text">
           {props.github && (
-            <a href={props.github} className="hover:text-white">
+            <a href={props.github} target="_blank" className="hover:text-white">
               <FiGithub />
             </a>
           )}
           {props.website && (
-            <a href={props.website} className="hover:text-primary-text">
+            <a
+              href={props.website}
+              target="_blank"
+              className="hover:text-primary-text"
+            >
               <FiExternalLink />
             </a>
           )}

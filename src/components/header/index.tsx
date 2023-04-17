@@ -1,13 +1,42 @@
-import React from "react";
+import { MouseEventHandler } from "react";
 
-function Btn({ name, primary }: { name: string; primary?: boolean }) {
-  return (
+type Btn = {
+  name: string;
+  asLink?: boolean;
+  href?: string;
+  primary?: boolean;
+  focus?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+};
+
+function Btn({ name, asLink, href, primary, focus, onClick }: Btn) {
+  return asLink ? (
+    <a
+      className={`${
+        primary
+          ? "text-primary-text border-[1.5px] border-primary-text rounded-[10px] px-[20px] py-[10px] hover:text-primary hover:bg-primary-text"
+          : "hover:border-b-2 border-primary-text"
+      } ${
+        focus
+          ? "text-primary border-[1.5px] border-primary-text rounded-[10px] px-[20px] py-[10px] bg-primary-text hover:scale-105 active:scale-95"
+          : "hover:border-b-2 border-primary-text"
+      } flex items-center font-minecraft ease-in-out transition-all`}
+      href={href || "#"}
+    >
+      {name}
+    </a>
+  ) : (
     <button
       className={`${
         primary
-          ? "border-[1.5px] border-primary-text border-header-text rounded-[10px] px-[20px] py-[10px] hover:text-primary hover:bg-primary-text"
+          ? "text-primary-text border-[1.5px] border-primary-text rounded-[10px] px-[20px] py-[10px] hover:text-primary hover:bg-primary-text"
           : "hover:border-b-2 border-primary-text"
-      } text-primary-text font-minecraft ease-in-out transition-all`}
+      } ${
+        focus
+          ? "text-primary border-[1.5px] border-primary-text rounded-[10px] px-[20px] py-[10px] bg-primary-text hover:scale-105 active:scale-95"
+          : "hover:border-b-2 border-primary-text"
+      } font-minecraft ease-in-out transition-all`}
+      onClick={onClick}
     >
       {name}
     </button>
@@ -15,17 +44,28 @@ function Btn({ name, primary }: { name: string; primary?: boolean }) {
 }
 
 function Header() {
+  const handleCVDownload = async () => {
+    const fileName = "s-k-zaman_CV.pdf";
+    try {
+      const response = await fetch("/downloads/khairul-cv.pdf");
+      const blob = await response.blob();
+      const fileUrl = window.URL.createObjectURL(blob);
+      let alink = document.createElement("a");
+      alink.href = fileUrl;
+      alink.download = fileName;
+      alink.click();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="font-minecraft text-primary-text flex flex-row items-baseline justify-between py-5">
       <div>
-        <a href="#">S-K-ZAMAN</a>
+        <a href="/">S-K-ZAMAN</a>
       </div>
       <div className="flex gap-5">
-        <Btn name="About" />
-        <Btn name="Experience" />
-        <Btn name="Work" />
-        <Btn name="Contact" />
-        <Btn name="Resume" primary />
+        <Btn asLink href="#about-me" name="About" />
+        <Btn name="Resume" primary onClick={handleCVDownload} />
       </div>
     </div>
   );

@@ -6,43 +6,36 @@ function IHaveBuilt() {
   return (
     <Showcase>
       <TitleWithBar title="Some Things I’ve Built">
-        <div className="flex flex-col gap-[64px]">
+        <div id="featured" className="flex flex-col gap-[64px]">
           <FeatureProject
-            title="Halcyon Theme"
-            imgClass="bg-fearured-test"
+            title="ReadEase"
+            imgClass="bg-featured-readease"
             popText={
               <>
-                A minimal, dark blue theme for VS Code, Sublime Text, Atom,
-                iTerm, and more. Available on{" "}
-                <HL>
-                  Visual Studio Marketplace, Package Control, Atom Package
-                  Manager
-                </HL>
-                , and <HL>npm</HL>.
+                An articles reading website where user can see{" "}
+                <HL>Tree View</HL> of the articles. NextJs was used to create
+                the front end, <HL>SSR, caching</HL> etc. while Node, Express
+                were used to create back-end. Build an <HL>inbuilt WYSIWYG</HL>{" "}
+                editor using <HL>slate-react</HL>.
               </>
             }
-            tools={["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"]}
-            github="this"
-            website="that"
+            tools={["NextJs", "react", "Ts", "Node", "MongoDB", "JWT"]}
+            website="https://www.readease.in"
           />
           <FeatureProject
             reversed
-            title="Halcyon Theme"
-            imgClass="bg-fearured-test"
+            title="Netflix clone"
+            imgClass="bg-featured-netflix"
             popText={
               <>
-                A minimal, dark blue theme for VS Code, Sublime Text, Atom,
-                iTerm, and more. Available on{" "}
-                <HL>
-                  Visual Studio Marketplace, Package Control, Atom Package
-                  Manager
-                </HL>
-                , and <HL>npm</HL>.
+                A working Netflix Clone using React and <HL>TMDB APIs</HL>.
+                Functionality to add shows to{" "}
+                <HL>favourite List, give rating, add to watchlist</HL> etc.
+                Axios was used for handling APIs and Redux for React State
+                handling.
               </>
             }
-            tools={["test1", "test2"]}
-            github="this"
-            website="that"
+            tools={["react", "tailwindCss", "axios", "redux"]}
           />
         </div>
       </TitleWithBar>
