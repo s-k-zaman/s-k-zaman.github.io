@@ -14,11 +14,11 @@ function Btn({ name, asLink, href, primary, focus, onClick }: Btn) {
     <a
       className={`${
         primary
-          ? "text-primary-text border-[1.5px] border-primary-text rounded-[10px] px-[20px] py-[10px] hover:text-primary hover:bg-primary-text"
+          ? "text-primary-text border-[1.5px] border-primary-text rounded-[10px] px-[10px] py-[5px] lg:px-[20px] lg:py-[10px] hover:text-primary hover:bg-primary-text"
           : "hover:border-b-2 border-primary-text"
       } ${
         focus
-          ? "text-primary border-[1.5px] border-primary-text rounded-[10px] px-[20px] py-[10px] bg-primary-text hover:scale-105 active:scale-95"
+          ? "text-primary border-[1.5px] border-primary-text rounded-[10px] px-[10px] py-[5px] lg:px-[20px] lg:py-[10px] bg-primary-text hover:scale-105 active:scale-95"
           : "hover:border-b-2 border-primary-text"
       } flex items-center font-minecraft ease-in-out transition-all`}
       href={href || "#"}
@@ -61,7 +61,9 @@ function Header() {
   return (
     <div className="font-minecraft text-primary-text flex flex-row items-baseline justify-between py-5">
       <div>
-        <a href="/">S-K-ZAMAN</a>
+        <a className="hidden lg:block" href="/">
+          S-K-ZAMAN
+        </a>
       </div>
       <div className="flex gap-5">
         <Btn asLink href="#about-me" name="About" />

@@ -1,6 +1,6 @@
 .image_container {
-  --image-width: 245px;
-  --image-height: 330px;
+  --image-width: 220.5px;
+  --image-height: 297px;
   flex-shrink: 0;
   flex-basis: var(--image-width);
   height: var(--image-height);
@@ -19,4 +19,11 @@
   background-size: cover;
   width: var(--image-width);
   height: var(--image-height);
+}
+
+@media (min-width: 1024px) {
+  .image_container {
+    --image-width: 245px;
+    --image-height: 330px;
+  }
 }

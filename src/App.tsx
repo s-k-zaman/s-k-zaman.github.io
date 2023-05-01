@@ -9,7 +9,7 @@ import RightMail from "./components/rightMail";
 
 function App() {
   return (
-    <div className="scroll-smooth relative px-10 min-h-screen bg-primary">
+    <div className="scroll-smooth relative px-6 lg:px-10 min-h-screen bg-primary">
       <Header />
       <LeftSocial />
       <RightMail />
