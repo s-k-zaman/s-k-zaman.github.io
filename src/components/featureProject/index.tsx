@@ -71,7 +71,13 @@ function FeatureProject(props: Props) {
             <span key={tool}>{tool}</span>
           ))}
         </div>
-        <div className="z-10 pb-4 pl-4 lg:p-0 items-start lg:items-end w-full flex gap-[10px] text-secondary-text">
+        <div
+          className={`z-10 pb-4 pl-4 lg:p-0 flex flex-row gap-[10px] ${
+            props.reversed
+              ? "items-start lg:[&>*]:mr-auto"
+              : "items-end lg:[&>*]:ml-auto"
+          } w-full text-secondary-text`}
+        >
           {props.github && (
             <a href={props.github} target="_blank" className="hover:text-white">
               <FiGithub />
