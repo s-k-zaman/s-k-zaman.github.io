@@ -1,4 +1,3 @@
-import React from "react";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 type props = {
@@ -30,7 +29,7 @@ function OtherProject({ tools, github, website, title, description }: props) {
       </div>
       <div className="h-full flex flex-col justify-between gap-[47px]">
         <div>
-          <h3 className="text-xl font-medium mb-[10px]">{title}</h3>
+          <h3 className="text-lg lg:text-xl font-medium mb-[10px]">{title}</h3>
           <p className="text-[14px] text-secondary-dark font-light text-justify">
             {description}
           </p>
