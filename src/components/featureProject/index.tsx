@@ -28,7 +28,7 @@ function FeatureProject(props: Props) {
     >
       <div
         className={classNames(
-          `basis-[55%] shrink-0 ${props.imgClass} bg-cover bg-center`
+          `hidden lg:block basis-[55%] shrink-0 ${props.imgClass} bg-cover bg-center`
         )}
       >
         {props.website ? (
@@ -40,35 +40,38 @@ function FeatureProject(props: Props) {
         )}
       </div>
       <div
-        className={`basis-full font-poppins flex flex-col ${
+        className={`relative basis-full font-poppins flex flex-col ${
           props.reversed ? "items-start" : "items-end"
-        } gap-[20px]`}
+        } gap-[20px] ${props.imgClass} lg:bg-none bg-cover bg-center`}
       >
+        <div className="absolute lg:hidden w-full h-full bg-[#020133]/75 backdrop-brightness-50 transition-all" />
         <div
-          className={`mt-0 flex flex-col ${
-            props.reversed ? "items-start" : "items-end"
+          className={`mt-0 flex flex-col w-full px-4 pt-4 lg:p-0 z-10 ${
+            props.reversed ? "items-start" : "items-start lg:items-end"
           }`}
         >
-          <div className="w-fit font-medium text-xs text-primary-text">
+          <div className="w-fit font-medium text-x text-secondary-dark lg:text-primary-text">
             Featured Project
           </div>
-          <h2 className="w-fit font-medium text-xl">{props.title}</h2>
+          <h2 className="w-fit font-medium text-xl text-primary-text">
+            {props.title}
+          </h2>
         </div>
-        <div className="z-10 text-secondary-dark text-sm w-[140%] bg-secondary-bg shadow-deep rounded-[5px] px-4 py-5 transition-all duration-500">
+        <div className="z-10 text-secondary-text text-sm w-full lg:w-[140%] bg-none lg:bg-secondary-bg shadow-deep rounded-[5px] px-4 py-5 transition-all duration-500">
           {props.popText}
         </div>
         <div
-          className={`font-normal text-sm flex flex-row flex-wrap ${
+          className={`z-10 font-normal text-sm flex flex-row flex-wrap px-4 lg:p-0 ${
             props.reversed
               ? "items-start [&>*]:mr-auto"
               : "items-end [&>*]:ml-auto"
           }  gap-[8px] px-1`}
         >
           {props.tools.map((tool) => (
-            <span>{tool}</span>
+            <span key={tool}>{tool}</span>
           ))}
         </div>
-        <div className="flex gap-[10px] text-secondary-text">
+        <div className="z-10 pb-4 pl-4 lg:p-0 items-start lg:items-end w-full flex gap-[10px] text-secondary-text">
           {props.github && (
             <a href={props.github} target="_blank" className="hover:text-white">
               <FiGithub />

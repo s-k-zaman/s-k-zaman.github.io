@@ -8,7 +8,7 @@ function OtherProjects() {
     <Showcase>
       <TitleSecondary title="Other Noteworthy Projects">
         <div id="other-projects" className="flex flex-col gap-[20px]">
-          <div className="flex justify-between gap-[10px] [&>*]:flex-1">
+          <div className="flex flex-col lg:flex-row justify-between gap-[10px] [&>*]:flex-1">
             <OtherProject
               title="E-commerce Platform"
               tools={["Laravel", "Javascript", "MySQL", "sass"]}

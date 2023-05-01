@@ -6,7 +6,7 @@ function About() {
   return (
     <Showcase id="about-me">
       <TitleWithBar title="About me">
-        <div className="flex flex-row gap-11">
+        <div className="flex flex-col md:flex-row gap-11">
           <div className="basis-full flex flex-col justify-start gap-10">
             <p className="text-justify">
               I take pride in my detail-oriented approach to writing clean and
@@ -18,22 +18,24 @@ function About() {
               outcomes and recognized for my effective communication and
               positive approach.
             </p>
-            <p className="text-slate-300/90">
-              Here are a few technologies I’ve been working with recently:
-              <div className="font-montserrat mt-1 flex flex-wrap [&>*]:w-[40%] items-center justify-center">
+            <div className="text-slate-300/90">
+              <p>
+                Here are a few technologies I’ve been working with recently:
+              </p>
+              <ul className="font-montserrat mt-1 flex flex-wrap [&>*]:w-[40%] items-center justify-center">
                 <li>NextJs</li>
                 <li>Typescript</li>
                 <li>ReactJs</li>
                 <li>tailwindCSS</li>
-              </div>
-            </p>
+              </ul>
+            </div>
           </div>
           <div className={`relative w-full h-full ${classes.image_container}`}>
             <div
-              className={`absolute rounded-[20px] border-2 left-[15px] top-[15px] border-primary-text ${classes.image_border}`}
+              className={`absolute z-10 rounded-[20px] border-2 mx-auto right-0 left-[30px] md:left-[15px] top-[15px] border-primary-text ${classes.image_border}`}
             ></div>
             <div
-              className={`absolute rounded-[20px] left-0 top-0 ${classes.image}`}
+              className={`absolute z-10 rounded-[20px] mx-auto right-0 left-0 top-0 ${classes.image}`}
             ></div>
           </div>
         </div>

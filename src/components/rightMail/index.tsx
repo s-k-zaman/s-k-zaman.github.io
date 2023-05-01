@@ -2,7 +2,7 @@ import React from "react";
 
 function RightMail() {
   return (
-    <div className="fixed bottom-0 right-[-55px] text-secondary-text flex flex-col items-center gap-[20px]">
+    <div className="fixed bottom-0 right-[-55px] text-secondary-text hidden xl:flex flex-col items-center gap-[20px]">
       <div className="rotate-90 -translate-y-[110px]">
         <a
           href="mailto:sudo.coder.zaman@gmail.com"

@@ -37,7 +37,7 @@ function OtherProject({ tools, github, website, title, description }: props) {
         </div>
         <div className="flex items-start flex-wrap [&>*]:mr-auto gap-[8px] text-primary-text font-light">
           {tools.map((tool) => (
-            <span>{tool}</span>
+            <span key={tool}>{tool}</span>
           ))}
         </div>
       </div>
