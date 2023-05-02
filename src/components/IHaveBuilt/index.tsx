@@ -26,7 +26,6 @@ function IHaveBuilt() {
             reversed
             title="Netflix clone"
             imgClass="bg-featured-netflix"
-            website="text"
             popText={
               <>
                 A working Netflix Clone using React and <HL>TMDB APIs</HL>.
