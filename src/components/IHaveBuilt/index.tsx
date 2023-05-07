@@ -36,6 +36,8 @@ function IHaveBuilt() {
               </>
             }
             tools={["react", "tailwindCss", "axios", "redux"]}
+            github="https://github.com/s-k-zaman/netflix-clone"
+            website="https://netfilx-clone-305ab.web.app/"
           />
         </div>
       </TitleWithBar>
