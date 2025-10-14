@@ -34,7 +34,8 @@ jobs:
       env:
         USER_NAME: "github-actions[bot]"
         USER_EMAIL: "github-actions[bot]@users.noreply.github.com"
-        GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+        # GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REPO: ${{ github.repository }}
       run: |
         # git config --global user.name "github-actions[bot]"
