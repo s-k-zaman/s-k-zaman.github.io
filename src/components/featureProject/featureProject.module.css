@@ -1,14 +1,31 @@
-.featured:hover > :nth-child(1) > :nth-child(1) {
+/***** SIMPLE NO ANIMATION *****/
+.featured > :nth-child(1) > :nth-child(1) {
   background-color: transparent;
 }
-.featured:hover > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+.featured > :nth-child(1) > :nth-child(1) > :nth-child(1) {
   background-color: transparent;
 }
 @media (min-width: 1024px) {
-  .featured_normal:hover > :nth-child(2) > :nth-child(3) {
+  .featured_normal > :nth-child(2) > :nth-child(3) {
     transform: translateX(33%);
   }
-  .featured_reversed:hover > :nth-child(2) > :nth-child(3) {
+  .featured_reversed > :nth-child(2) > :nth-child(3) {
     transform: translateX(-33%);
   }
 }
+
+/***** SIMPLE SLIDING ANIMATED *****/
+/* .featured:hover > :nth-child(1) > :nth-child(1) { */
+/*   background-color: transparent; */
+/* } */
+/* .featured:hover > :nth-child(1) > :nth-child(1) > :nth-child(1) { */
+/*   background-color: transparent; */
+/* } */
+/* @media (min-width: 1024px) { */
+/*   .featured_normal:hover > :nth-child(2) > :nth-child(3) { */
+/*     transform: translateX(33%); */
+/*   } */
+/*   .featured_reversed:hover > :nth-child(2) > :nth-child(3) { */
+/*     transform: translateX(-33%); */
+/*   } */
+/* } */
