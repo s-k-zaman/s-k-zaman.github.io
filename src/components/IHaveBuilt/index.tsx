@@ -8,6 +8,20 @@ function IHaveBuilt() {
       <TitleWithBar title="Some Things I’ve Built">
         <div id="featured" className="flex flex-col gap-[64px]">
           <FeatureProject
+            reversed
+            title="todox"
+            imgClass="bg-featured-todox"
+            popText={
+              <>
+                A simple CLI tool for managing Project wise TODO lists in
+                Markdown format, with tmux integration. Edit TODOs, Add a tasks,
+                Specify custom file.
+              </>
+            }
+            tools={["Go", "tmux", "pflag", "linux"]}
+            github="https://github.com/s-k-zaman/todox#"
+          />
+          <FeatureProject
             title="ReadEase"
             imgClass="bg-featured-readease"
             popText={
