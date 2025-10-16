@@ -8,6 +8,28 @@ function IHaveBuilt() {
       <TitleWithBar title="Some Things I’ve Built">
         <div id="featured" className="flex flex-col gap-[94px]">
           <FeatureProject
+            title="Product recommend glens"
+            imgClass=""
+            popText={
+              <>
+                A serverless product recommendation system that processes
+                uploaded images, detects clothing items, and finds similar
+                products using Google Lens and web scraping.
+              </>
+            }
+            tools={[
+              "python",
+              "automation",
+              "selenium",
+              "headless",
+              "json",
+              "S3",
+              "SQS",
+              "eCommerce",
+            ]}
+            github="https://github.com/s-k-zaman/glens-product-recommend#"
+          />
+          <FeatureProject
             title="Twitter(X) Feed Scraper Bot"
             reversed
             imgClass=""
