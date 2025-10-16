@@ -8,6 +8,21 @@ function IHaveBuilt() {
       <TitleWithBar title="Some Things I’ve Built">
         <div id="featured" className="flex flex-col gap-[94px]">
           <FeatureProject
+            title="Hostel Meal Management"
+            imgClass="bg-featured-hostel-meal"
+            popText={
+              <>
+                A Python-based application for automating meal tracking,
+                budgeting, and charge calculations for hostels. This system
+                simplifies the management of boarder meals, guest meals,
+                deposits, and expenses using Excel spreadsheets as the data
+                backend.
+              </>
+            }
+            tools={["Python", "pandas", "openpyxl", "pendulum", "fuzzy-search"]}
+            github="https://github.com/s-k-zaman/auto-mealer-hostel"
+          />
+          <FeatureProject
             reversed
             title="todox"
             imgClass="bg-featured-todox"
