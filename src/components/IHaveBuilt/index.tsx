@@ -8,6 +8,20 @@ function IHaveBuilt() {
       <TitleWithBar title="Some Things I’ve Built">
         <div id="featured" className="flex flex-col gap-[94px]">
           <FeatureProject
+            title="LinkedIn Mention Reply Bot"
+            imgClass=""
+            reversed
+            popText={
+              <>
+                An automated bot that monitors LinkedIn mentions and replies to
+                them intelligently, helping you maintain engagement on the
+                platform.
+              </>
+            }
+            tools={["python", "automation", "selenium", "bot"]}
+            github="https://github.com/s-k-zaman/linkedin-mention-reply#"
+          />
+          <FeatureProject
             title="Research paper to XML"
             imgClass="bg-featured-research-xml"
             popText={
@@ -94,7 +108,7 @@ function IHaveBuilt() {
                 handling.
               </>
             }
-            tools={["react", "tailwindCss", "axios", "redux"]}
+            tools={["react", "tailwindCss", "axios", "redux", "firebase"]}
             github="https://github.com/s-k-zaman/netflix-clone"
             website="https://netfilx-clone-305ab.web.app/"
           />
