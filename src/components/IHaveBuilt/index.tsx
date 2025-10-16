@@ -8,6 +8,26 @@ function IHaveBuilt() {
       <TitleWithBar title="Some Things I’ve Built">
         <div id="featured" className="flex flex-col gap-[94px]">
           <FeatureProject
+            title="X(Previously Twitter) Mention Reply Bot"
+            imgClass=""
+            popText={
+              <>
+                An automated Twitter bot that monitors mentions and replies to
+                them using Selenium browser automation.
+              </>
+            }
+            tools={[
+              "python",
+              "automation",
+              "selenium",
+              "bot",
+              "headless",
+              "retry",
+              "notification",
+            ]}
+            github="https://github.com/s-k-zaman/twitter-mention-reply"
+          />
+          <FeatureProject
             title="LinkedIn Mention Reply Bot"
             imgClass=""
             reversed
@@ -18,7 +38,7 @@ function IHaveBuilt() {
                 platform.
               </>
             }
-            tools={["python", "automation", "selenium", "bot"]}
+            tools={["python", "automation", "selenium", "bot", "headless"]}
             github="https://github.com/s-k-zaman/linkedin-mention-reply#"
           />
           <FeatureProject
