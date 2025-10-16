@@ -8,6 +8,30 @@ function IHaveBuilt() {
       <TitleWithBar title="Some Things I’ve Built">
         <div id="featured" className="flex flex-col gap-[94px]">
           <FeatureProject
+            title="Twitter(X) Feed Scraper Bot"
+            reversed
+            imgClass=""
+            popText={
+              <>
+                A Python-based web scraper for extracting posts from Twitter (X)
+                feeds using Selenium and Flask. This tool automates the process
+                of logging into Twitter and scraping recent posts from the home
+                timeline.
+              </>
+            }
+            tools={[
+              "python",
+              "automation",
+              "selenium",
+              "bot",
+              "headless",
+              "Flask",
+              "API",
+              "notification",
+            ]}
+            github="https://github.com/s-k-zaman/twitter-feed-scraper"
+          />
+          <FeatureProject
             title="X(Previously Twitter) Mention Reply Bot"
             imgClass=""
             popText={
