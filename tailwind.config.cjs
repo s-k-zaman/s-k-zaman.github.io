@@ -32,6 +32,7 @@ module.exports = {
           "url('https://images.unsplash.com/photo-1637363990764-de84fd247b7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
         "featured-todox": "url('/featured/todox.png')",
         "featured-hostel-meal": "url('/featured/hostel-meal.png')",
+        "featured-muni-out": "url('/featured/muni-out.png')",
       },
     },
   },

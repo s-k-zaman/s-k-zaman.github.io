@@ -8,6 +8,20 @@ function IHaveBuilt() {
       <TitleWithBar title="Some Things I’ve Built">
         <div id="featured" className="flex flex-col gap-[94px]">
           <FeatureProject
+            title="Muni Landing Page"
+            imgClass="bg-featured-muni-out"
+            reversed
+            popText={
+              <>
+                Landing page for a muni, The intelligent AI agent built to
+                streamline municipal services.
+              </>
+            }
+            tools={["NextJs", "tailwindCSS", "Figma Design"]}
+            github="https://github.com/s-k-zaman/-muni_out-test.git"
+            website="https://muni-out-test.vercel.app/"
+          />
+          <FeatureProject
             title="Hostel Meal Management"
             imgClass="bg-featured-hostel-meal"
             popText={
