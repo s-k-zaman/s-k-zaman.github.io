@@ -33,6 +33,7 @@ module.exports = {
         "featured-todox": "url('/featured/todox.png')",
         "featured-hostel-meal": "url('/featured/hostel-meal.png')",
         "featured-muni-out": "url('/featured/muni-out.png')",
+        "featured-research-xml": "url('/featured/research-xml.png')",
       },
     },
   },

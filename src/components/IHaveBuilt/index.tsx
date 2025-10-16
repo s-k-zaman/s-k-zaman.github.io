@@ -8,6 +8,22 @@ function IHaveBuilt() {
       <TitleWithBar title="Some Things I’ve Built">
         <div id="featured" className="flex flex-col gap-[94px]">
           <FeatureProject
+            title="Research paper to XML"
+            imgClass="bg-featured-research-xml"
+            popText={
+              <>
+                A sophisticated Python-based tool for academic document
+                processing, leveraging advanced NLP techniques with spaCy to
+                extract structured metadata from PDF documents. It converts PDFs
+                to TEI XML using Grobid, parses and enriches the data, and
+                outputs in JATS or Elsevier XML formats for seamless integration
+                into publishing workflows.
+              </>
+            }
+            tools={["Grobid", "Spacy", "NL", "tei-XML", "pdfplumber", "lxml"]}
+            github="https://github.com/s-k-zaman/research-paper-to-xml.git"
+          />
+          <FeatureProject
             title="Muni Landing Page"
             imgClass="bg-featured-muni-out"
             reversed
@@ -47,7 +63,7 @@ function IHaveBuilt() {
                 Specify custom file.
               </>
             }
-            tools={["Go", "tmux", "pflag", "linux"]}
+            tools={["Go", "tmux", "pflag", "linux", "CLI"]}
             github="https://github.com/s-k-zaman/todox#"
           />
           <FeatureProject
