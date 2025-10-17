@@ -8,6 +8,28 @@ function IHaveBuilt() {
       <TitleWithBar title="Some Things I’ve Built">
         <div id="featured" className="flex flex-col gap-[94px]">
           <FeatureProject
+            title="Zara Products Scraper"
+            imgClass=""
+            popText={
+              <>
+                A Python script that scrapes Zara's website to download
+                high-quality product images. It uses Selenium for browser
+                automation to navigate product pages and extract images,
+                handling multiple color variants.
+              </>
+            }
+            tools={[
+              "python",
+              "automation",
+              "selenium",
+              "large-scale data",
+              "headless",
+              "images",
+              "multi-colored",
+            ]}
+            github="https://github.com/s-k-zaman/zara-data-scraper#"
+          />
+          <FeatureProject
             title="Casemine Scraper"
             imgClass=""
             reversed
