@@ -8,6 +8,21 @@ function IHaveBuilt() {
       <TitleWithBar title="Some Things I’ve Built">
         <div id="featured" className="flex flex-col gap-[94px]">
           <FeatureProject
+            title="Stealthwriter Humnaizer"
+            reversed
+            imgClass=""
+            popText={
+              <>
+                A Python semi-automation tool that humanizes text in Word
+                (.docx) documents using the StealthWriter.ai web service via
+                Selenium browser automation. Helpful for content writers,
+                academic writers processing large and multiple files in a day.
+              </>
+            }
+            tools={["python", "automation", "selenium"]}
+            github="https://github.com/s-k-zaman/stealthwriter-humanizer.git"
+          />
+          <FeatureProject
             title="Zara Products Scraper"
             imgClass=""
             popText={
