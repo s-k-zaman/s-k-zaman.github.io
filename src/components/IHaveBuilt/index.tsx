@@ -8,6 +8,29 @@ function IHaveBuilt() {
       <TitleWithBar title="Some Things I’ve Built">
         <div id="featured" className="flex flex-col gap-[94px]">
           <FeatureProject
+            title="Casemine Scraper"
+            imgClass=""
+            reversed
+            popText={
+              <>
+                A Python-based web scraper for Casemine, a platform providing
+                access to judgments and orders from high courts across India.
+                This tool automates the process of downloading legal documents,
+                handling CAPTCHAs, and managing large-scale data extraction very
+                fast(parallel download).
+              </>
+            }
+            tools={[
+              "python",
+              "automation",
+              "selenium",
+              "large-scale data",
+              "headless",
+              "json",
+            ]}
+            github="https://github.com/s-k-zaman/casemine-scraper#"
+          />
+          <FeatureProject
             title="Product recommend glens"
             imgClass=""
             popText={
