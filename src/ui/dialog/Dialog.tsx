@@ -6,9 +6,10 @@ import { IoClose } from "react-icons/io5";
 
 export type DialogProps = {
   trigger: React.ReactNode;
+  tabIndex?: number;
   name?: string; // query param key
   clearQueryParamsOnClose?: string[];
-  title?: string;
+  title?: string | ReactNode;
   description?: string | ReactNode;
   children?: ReactNode;
   footer?: ReactNode;
@@ -40,6 +41,7 @@ export function Dialog({
   description,
   children,
   footer,
+  tabIndex = 0,
   size = "md",
   enableOverflow = false,
   noCloseButton = false,
@@ -96,6 +98,7 @@ export function Dialog({
     >
       <DialogPrimitive.Trigger
         className={classNames("cursor-pointer", triggerClassName)}
+        tabIndex={tabIndex}
         asChild
       >
         {trigger}
@@ -115,6 +118,11 @@ export function Dialog({
           onPointerDownOutside={(e) => {
             if (noOutsideClose) e.preventDefault();
           }}
+          aria-describedby={
+            description && typeof description === "string"
+              ? description
+              : undefined
+          }
           className={classNames(
             "z-50",
             "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",

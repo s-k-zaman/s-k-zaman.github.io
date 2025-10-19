@@ -32,6 +32,7 @@ module.exports = {
         glow: "0px 5px 20px 2px rgba(139, 236, 233, 0.10)",
       },
       backgroundImage: {
+        // TODO: remove these after using new FeatureProject
         "featured-readease": "url('/featured/readease.png')",
         "featured-test":
           "url('https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",

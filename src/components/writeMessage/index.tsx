@@ -15,6 +15,8 @@ function WriteMessage({}: Props) {
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!form.current) return;
+
     const send = async (formData: any) => {
       setIsSending(true);
       try {
@@ -22,7 +24,7 @@ function WriteMessage({}: Props) {
           "service_qqldcwt",
           "template_m14ffj8",
           formData,
-          "TsiLurJuTzfzePRpH"
+          "TsiLurJuTzfzePRpH",
         );
         if (result.text !== "OK") {
           throw "err";

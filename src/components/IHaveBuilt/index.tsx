@@ -1,55 +1,17 @@
 import Showcase from "../showcase";
 import TitleWithBar from "../titleWithBar";
-import FeatureProjectNew, { HL } from "../featureProject";
-import FeatureProject from "../featureProject/index-old";
+import FeatureProject, { HL } from "../FeatureProject";
 
 function IHaveBuilt() {
   return (
     <Showcase largeContent>
       <TitleWithBar title="Some Things I’ve Built" />
       <div id="featured" className="flex flex-col gap-[94px]">
-        <FeatureProjectNew
-          title={
-            <>
-              X(Previously Twitter)
-              <br />  Mention Reply Bot
-            </>
-          }
-          disclaimer="This project is for educational and personal use. Please respect StealthWriter.ai's terms of service."
-          images={[
-            {
-              original: "/featured/readease.png",
-              alt: "readease",
-              height: 890,
-              width: 1894,
-            },
-            {
-              original: "/featured/todox.png",
-              alt: "todox",
-              height: 1080,
-              width: 1920,
-              caption: "TODOs app",
-            },
-          ]}
-          // description={
-          //   <>
-          //     An articles reading website where user can see <HL>Tree View</HL>{" "}
-          //     of the articles. NextJs was used to create the front end,{" "}
-          //     <HL>SSR, caching</HL> etc. while Node, Express were used to create
-          //     back-end. Build an <HL>inbuilt WYSIWYG</HL> editor using{" "}
-          //     <HL>slate-react</HL>.
-          //   </>
-          // }
-          description="An automated Twitter bot that monitors mentions and replies to them using Selenium browser automation."
-          tools={["NextJs", "react", "Ts", "Node", "MongoDB", "JWT"]}
-          website="https://www.readease.in"
-          github="https://github.com/s-k-zaman/stealthwriter-humanizer.git"
-        />
         <FeatureProject
           title="Stealthwriter Humnaizer"
           reversed
-          imgClass=""
-          popText={
+          images={[]}
+          description={
             <>
               A Python semi-automation tool that humanizes text in Word (.docx)
               documents using the StealthWriter.ai web service via Selenium
@@ -59,11 +21,12 @@ function IHaveBuilt() {
           }
           tools={["python", "automation", "selenium"]}
           github="https://github.com/s-k-zaman/stealthwriter-humanizer.git"
+          privateGithub
         />
         <FeatureProject
           title="Zara Products Scraper"
-          imgClass=""
-          popText={
+          images={[]}
+          description={
             <>
               A Python script that scrapes Zara's website to download
               high-quality product images. It uses Selenium for browser
@@ -81,12 +44,13 @@ function IHaveBuilt() {
             "multi-colored",
           ]}
           github="https://github.com/s-k-zaman/zara-data-scraper#"
+          privateGithub
         />
         <FeatureProject
           title="Casemine Scraper"
-          imgClass=""
+          images={[]}
           reversed
-          popText={
+          description={
             <>
               A Python-based web scraper for Casemine, a platform providing
               access to judgments and orders from high courts across India. This
@@ -107,8 +71,8 @@ function IHaveBuilt() {
         />
         <FeatureProject
           title="Product recommend glens"
-          imgClass=""
-          popText={
+          images={[]}
+          description={
             <>
               A serverless product recommendation system that processes uploaded
               images, detects clothing items, and finds similar products using
@@ -130,8 +94,8 @@ function IHaveBuilt() {
         <FeatureProject
           title="Twitter(X) Feed Scraper Bot"
           reversed
-          imgClass=""
-          popText={
+          images={[]}
+          description={
             <>
               A Python-based web scraper for extracting posts from Twitter (X)
               feeds using Selenium and Flask. This tool automates the process of
@@ -153,8 +117,8 @@ function IHaveBuilt() {
         />
         <FeatureProject
           title="X(Previously Twitter) Mention Reply Bot"
-          imgClass=""
-          popText={
+          images={[]}
+          description={
             <>
               An automated Twitter bot that monitors mentions and replies to
               them using Selenium browser automation.
@@ -173,9 +137,9 @@ function IHaveBuilt() {
         />
         <FeatureProject
           title="LinkedIn Mention Reply Bot"
-          imgClass=""
+          images={[]}
           reversed
-          popText={
+          description={
             <>
               An automated bot that monitors LinkedIn mentions and replies to
               them intelligently, helping you maintain engagement on the
@@ -183,12 +147,20 @@ function IHaveBuilt() {
             </>
           }
           tools={["python", "automation", "selenium", "bot", "headless"]}
-          github="https://github.com/s-k-zaman/linkedin-mention-reply#"
+          github="https://github.com/s-k-zaman/linkedin-mention-reply"
+          privateGithub
         />
         <FeatureProject
           title="Research paper to XML"
-          imgClass="bg-featured-research-xml"
-          popText={
+          images={[
+            {
+              original: "/featured/research-xml.png",
+              alt: "research-xml",
+              height: 800,
+              width: 1300,
+            },
+          ]}
+          description={
             <>
               A sophisticated Python-based tool for academic document
               processing, leveraging advanced NLP techniques with spaCy to
@@ -200,12 +172,20 @@ function IHaveBuilt() {
           }
           tools={["Grobid", "Spacy", "NL", "tei-XML", "pdfplumber", "lxml"]}
           github="https://github.com/s-k-zaman/research-paper-to-xml.git"
+          privateGithub
         />
         <FeatureProject
           title="Muni Landing Page"
-          imgClass="bg-featured-muni-out"
+          images={[
+            {
+              original: "/featured/muni-out.png",
+              alt: "muni landing page",
+              height: 800,
+              width: 1300,
+            },
+          ]}
           reversed
-          popText={
+          description={
             <>
               Landing page for a muni, The intelligent AI agent built to
               streamline municipal services.
@@ -217,8 +197,15 @@ function IHaveBuilt() {
         />
         <FeatureProject
           title="Hostel Meal Management"
-          imgClass="bg-featured-hostel-meal"
-          popText={
+          images={[
+            {
+              original: "/featured/hostel-meal.png",
+              alt: "hostel meal management",
+              height: 800,
+              width: 1300,
+            },
+          ]}
+          description={
             <>
               A Python-based application for automating meal tracking,
               budgeting, and charge calculations for hostels. This system
@@ -232,8 +219,16 @@ function IHaveBuilt() {
         <FeatureProject
           reversed
           title="todox"
-          imgClass="bg-featured-todox"
-          popText={
+          images={[
+            {
+              original: "/featured/todox.png",
+              alt: "todox: project todo management",
+              height: 1080,
+              width: 1920,
+              caption: "todox: project TODOs management",
+            },
+          ]}
+          description={
             <>
               A simple CLI tool for managing Project wise TODO lists in Markdown
               format, with tmux integration. Edit TODOs, Add a tasks, Specify
@@ -245,7 +240,6 @@ function IHaveBuilt() {
         />
         <FeatureProject
           title="ReadEase"
-          imgClass="bg-featured-readease"
           images={[
             {
               original: "/featured/readease.png",
@@ -253,15 +247,8 @@ function IHaveBuilt() {
               height: 890,
               width: 1894,
             },
-            {
-              original: "/featured/todox.png",
-              alt: "todox",
-              height: 1080,
-              width: 1920,
-              caption: "TODOs app",
-            },
           ]}
-          popText={
+          description={
             <>
               An articles reading website where user can see <HL>Tree View</HL>{" "}
               of the articles. NextJs was used to create the front end,{" "}
@@ -272,12 +259,21 @@ function IHaveBuilt() {
           }
           tools={["NextJs", "react", "Ts", "Node", "MongoDB", "JWT"]}
           website="https://www.readease.in"
+          privateGithub
         />
         <FeatureProject
           reversed
           title="Netflix clone"
-          imgClass="bg-featured-netflix"
-          popText={
+          images={[
+            {
+              original:
+                "https://images.unsplash.com/photo-1637363990764-de84fd247b7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+              alt: "readease",
+              height: 1080,
+              width: 1920,
+            },
+          ]}
+          description={
             <>
               A working Netflix Clone using React and <HL>TMDB APIs</HL>.
               Functionality to add shows to{" "}

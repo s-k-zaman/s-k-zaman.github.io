@@ -1,11 +1,27 @@
-import classes from "./featureProject.module.css";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import ImageGallery, { Image } from "./ImageGallery";
 import { cn } from "../../lib/tailwindCss";
+import AccessGithub from "../AccessGithub";
 
-function HL({ children }: { children: JSX.Element | string }) {
+export function HL({ children }: { children: JSX.Element | string }) {
   return <span className="text-primary-text">{children}</span>;
+}
+
+export function Disclaimer({ disclaimer }: { disclaimer?: React.ReactNode }) {
+  if (!disclaimer) return null;
+  return (
+    <div
+      className={cn(
+        "bg-white/[12%] py-[5px] px-[7px]",
+        "rounded-[18px] font-medium text-xs text-white/80",
+        "flex gap-2",
+      )}
+    >
+      <RiErrorWarningLine size={20} className="shrink-0 text-white/80" />
+      <p className="mt-[2px]">{disclaimer}</p>
+    </div>
+  );
 }
 
 type Props = {
@@ -21,7 +37,7 @@ type Props = {
   website?: string;
 };
 
-function FeatureProjectNew({
+export default function FeatureProject({
   title,
   description,
   reversed,
@@ -30,7 +46,7 @@ function FeatureProjectNew({
   github,
   disclaimer,
   privateGithub = false,
-  privateGithubAccessText = "",
+  privateGithubAccessText = "Why you want this project?",
   website,
 }: Props) {
   return (
@@ -48,7 +64,6 @@ function FeatureProjectNew({
           "shrink-0 basis-[40%] ",
           "overflow-hidden rounded-[20px]",
           "max-h-[363px]",
-          "tb3",
         )}
       >
         <ImageGallery images={images || []} />
@@ -63,9 +78,24 @@ function FeatureProjectNew({
       >
         {/* title and description */}
         <div className="flex flex-col gap-[5px]">
-          <h2 className="w-fit font-medium text:2xl xl:text-3xl text-primary-text">
-            {title}
-          </h2>
+          {github ? (
+            <AccessGithub
+              title={title}
+              github={github}
+              privateGithub={privateGithub}
+              privateGithubAccessText={privateGithubAccessText}
+              disclaimer={disclaimer}
+              noTabIndex
+            >
+              <h2 className="w-fit font-medium text:2xl xl:text-3xl text-primary-text hover:underline">
+                {title}
+              </h2>
+            </AccessGithub>
+          ) : (
+            <h2 className="w-fit font-medium text:2xl xl:text-3xl text-primary-text">
+              {title}
+            </h2>
+          )}
           <div className="text-white/80 text-[16px] font-light">
             {description}
           </div>
@@ -88,21 +118,7 @@ function FeatureProjectNew({
         </div>
         {/* disclaimer and links */}
         <div className="flex flex-col gap-[12px]">
-          {disclaimer && (
-            <div
-              className={cn(
-                "bg-white/[12%] py-[5px] px-[7px]",
-                "rounded-[18px] font-medium text-xs text-white/70",
-                "flex gap-2",
-              )}
-            >
-              <RiErrorWarningLine
-                size={20}
-                className="shrink-0 text-white/80"
-              />
-              <p>{disclaimer}</p>
-            </div>
-          )}
+          <Disclaimer disclaimer={disclaimer} />
           {(website || github) && (
             <div
               className={cn(
@@ -110,15 +126,17 @@ function FeatureProjectNew({
                 "text-primary-text font-minecraft",
               )}
             >
-              {github && (
-                <a
-                  href={github}
-                  target="_blank"
-                  className="hover:underline flex gap-1 items-center rounded-[10px] bg-primary px-[14px] py-[8px]"
-                >
+              <AccessGithub
+                title={title}
+                github={github}
+                privateGithub={privateGithub}
+                privateGithubAccessText={privateGithubAccessText}
+                disclaimer={disclaimer}
+              >
+                <div className="hover:underline flex gap-1 items-center rounded-[10px] bg-primary px-[14px] py-[8px]">
                   <FiGithub /> Github
-                </a>
-              )}
+                </div>
+              </AccessGithub>
               {website && (
                 <a
                   href={website}
@@ -135,6 +153,3 @@ function FeatureProjectNew({
     </div>
   );
 }
-
-export default FeatureProjectNew;
-export { HL };
