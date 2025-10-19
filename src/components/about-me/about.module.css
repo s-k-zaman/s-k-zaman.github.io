@@ -21,6 +21,11 @@
   height: var(--image-height);
 }
 
+.rotating_avatar_container {
+  width: var(--image-width);
+  height: var(--image-height);
+}
+
 @media (min-width: 1024px) {
   .image_container {
     --image-width: 245px;

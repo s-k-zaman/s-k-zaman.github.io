@@ -1,6 +1,7 @@
 import Showcase from "../showcase";
 import TitleWithBar from "../titleWithBar";
 import classes from "./about.module.css";
+import RotatingAvatar from "./RotatingAvatar";
 
 function About() {
   return (
@@ -34,9 +35,15 @@ function About() {
             <div
               className={`absolute z-10 rounded-[20px] border-2 mx-auto right-0 left-[30px] md:left-[15px] top-[15px] border-primary-text ${classes.image_border}`}
             ></div>
+            {/* INFO: using rotate dp */}
+            {/* <div */}
+            {/*   className={`absolute z-10 rounded-[20px] mx-auto right-0 left-0 top-0 ${classes.image} border`} */}
+            {/* ></div> */}
             <div
-              className={`absolute z-10 rounded-[20px] mx-auto right-0 left-0 top-0 ${classes.image}`}
-            ></div>
+              className={`absolute z-10 rounded-[20px] mx-auto right-0 left-0 top-0 w-fit`}
+            >
+              <RotatingAvatar />
+            </div>
           </div>
         </div>
       </TitleWithBar>

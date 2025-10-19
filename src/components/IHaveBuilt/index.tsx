@@ -1,12 +1,19 @@
 import Showcase from "../showcase";
 import TitleWithBar from "../titleWithBar";
 import FeatureProject, { HL } from "../featureProject";
+import { Dialog } from "../../ui/dialog";
 
 function IHaveBuilt() {
   return (
     <Showcase>
       <TitleWithBar title="Some Things I’ve Built">
         <div id="featured" className="flex flex-col gap-[94px]">
+          <Dialog
+            trigger={<button>dialog click</button>}
+            // name="test-dialog"
+          >
+            <p>this is test dialog screen</p>
+          </Dialog>
           <FeatureProject
             title="Stealthwriter Humnaizer"
             reversed
@@ -209,6 +216,21 @@ function IHaveBuilt() {
           <FeatureProject
             title="ReadEase"
             imgClass="bg-featured-readease"
+            images={[
+              {
+                original: "/featured/readease.png",
+                alt: "readease",
+                height: 890,
+                width: 1894,
+              },
+              {
+                original: "/featured/todox.png",
+                alt: "todox",
+                height: 1080,
+                width: 1920,
+                caption: "TODOs app",
+              },
+            ]}
             popText={
               <>
                 An articles reading website where user can see{" "}

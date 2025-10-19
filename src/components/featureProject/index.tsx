@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import classes from "./featureProject.module.css";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
+import ImageGallery, { Image } from "./ImageGallery";
 
 function HL({ children }: { children: JSX.Element | string }) {
   return <span className="text-primary-text">{children}</span>;
@@ -9,6 +10,7 @@ function HL({ children }: { children: JSX.Element | string }) {
 type Props = {
   reversed?: boolean;
   title: string;
+  images?: Image[];
   imgClass: string;
   popText: string | JSX.Element;
   tools: string[];
@@ -39,6 +41,13 @@ function FeatureProject(props: Props) {
           <div className="w-full h-full bg-primary-text/25 backdrop-brightness-75 transition-all" />
         )}
       </div>
+      {/* <div */}
+      {/*   className={classNames( */}
+      {/*     `hidden lg:block basis-[50%] shrink-0 rounded-[5px] aspect-video`, */}
+      {/*   )} */}
+      {/* > */}
+      {/*   <ImageGallery images={props.images || []} /> */}
+      {/* </div> */}
       <div
         className={`relative basis-full font-poppins flex flex-col ${
           props.reversed ? "items-start" : "items-end"
