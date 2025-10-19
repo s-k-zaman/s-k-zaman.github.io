@@ -10,6 +10,7 @@ module.exports = {
         minecraft: ["minecraft"],
         poppins: ["Poppins", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        code: ['"Source Code Pro"', "monospace"],
       },
       colors: {
         primary: {

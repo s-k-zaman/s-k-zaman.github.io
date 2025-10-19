@@ -7,9 +7,15 @@ function IHaveBuilt() {
   return (
     <Showcase largeContent>
       <TitleWithBar title="Some Things I’ve Built" />
-      <div id="featured" className="flex flex-col gap-[94px] tb3">
+      <div id="featured" className="flex flex-col gap-[94px]">
         <FeatureProjectNew
-          title="ReadEase"
+          title={
+            <>
+              X(Previously Twitter)
+              <br />  Mention Reply Bot
+            </>
+          }
+          disclaimer="This project is for educational and personal use. Please respect StealthWriter.ai's terms of service."
           images={[
             {
               original: "/featured/readease.png",
@@ -25,17 +31,19 @@ function IHaveBuilt() {
               caption: "TODOs app",
             },
           ]}
-          description={
-            <>
-              An articles reading website where user can see <HL>Tree View</HL>{" "}
-              of the articles. NextJs was used to create the front end,{" "}
-              <HL>SSR, caching</HL> etc. while Node, Express were used to create
-              back-end. Build an <HL>inbuilt WYSIWYG</HL> editor using{" "}
-              <HL>slate-react</HL>.
-            </>
-          }
+          // description={
+          //   <>
+          //     An articles reading website where user can see <HL>Tree View</HL>{" "}
+          //     of the articles. NextJs was used to create the front end,{" "}
+          //     <HL>SSR, caching</HL> etc. while Node, Express were used to create
+          //     back-end. Build an <HL>inbuilt WYSIWYG</HL> editor using{" "}
+          //     <HL>slate-react</HL>.
+          //   </>
+          // }
+          description="An automated Twitter bot that monitors mentions and replies to them using Selenium browser automation."
           tools={["NextJs", "react", "Ts", "Node", "MongoDB", "JWT"]}
           website="https://www.readease.in"
+          github="https://github.com/s-k-zaman/stealthwriter-humanizer.git"
         />
         <FeatureProject
           title="Stealthwriter Humnaizer"

@@ -2,6 +2,7 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 import type { GalleryProps } from "react-photoswipe-gallery";
 import "photoswipe/dist/photoswipe.css";
 import { DataSourceArray } from "photoswipe";
+import { cn } from "../../lib/tailwindCss";
 
 export type Image = {
   original: string;
@@ -12,7 +13,13 @@ export type Image = {
   thumbnail?: string;
 };
 
-export default function ImageGallery({ images }: { images: Image[] }) {
+export default function ImageGallery({
+  images,
+  displayImageClassname = "",
+}: {
+  images: Image[];
+  displayImageClassname?: string;
+}) {
   if (!images || images.length === 0) return null;
 
   const firstImage = images[0];
@@ -158,7 +165,7 @@ export default function ImageGallery({ images }: { images: Image[] }) {
       }}
       uiElements={[captionUiElement, thumbnailsIndicator].filter(Boolean)}
     >
-      <div className="flex justify-center">
+      <div className="flex justify-center h-full w-full">
         {/* Only show the first image as preview */}
         <Item
           original={firstImage.original}
@@ -170,18 +177,28 @@ export default function ImageGallery({ images }: { images: Image[] }) {
         >
           {({ ref, open }) => (
             <div
-              className="relative h-64 aspect-video cursor-pointer overflow-hidden rounded-[5px] shadow-lg"
+              className={cn(
+                "relative cursor-pointer overflow-hidden",
+                "h-full w-full",
+                displayImageClassname,
+              )}
               onClick={open}
             >
               <img
                 ref={ref}
                 src={firstImage.thumbnail || firstImage.original}
                 alt="Preview"
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                className="h-full w-full object-cover duration-300 hover:scale-[1.015] transition"
               />
               {/* Optional overlay indicator */}
               {images.length > 1 && (
-                <div className="absolute bottom-2 right-2 rounded-lg bg-black/60 px-2 py-1 text-base text-white">
+                <div
+                  className={cn(
+                    "absolute bottom-2 right-2",
+                    "bg-black/60 px-2 py-1",
+                    "rounded-full text-sm text-white",
+                  )}
+                >
                   +{images.length - 1} more
                 </div>
               )}

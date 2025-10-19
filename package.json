@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d dist -b main"
   },
   "dependencies": {
+    "@fontsource/source-code-pro": "^5.2.7",
     "@radix-ui/react-dialog": "^1.1.15",
     "clsx": "^2.1.1",
     "emailjs-com": "^3.2.0",
