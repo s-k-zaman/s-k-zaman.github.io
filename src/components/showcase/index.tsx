@@ -1,18 +1,32 @@
+import React from "react";
+import { cn } from "../../lib/tailwindCss";
+
+type ShowcaseProps = React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLElement>,
+  HTMLElement
+> & {
+  id?: string;
+  largeContent?: boolean;
+  lowMargin?: boolean;
+  children: React.ReactNode;
+};
+
 function Showcase({
-  id,
   children,
   lowMargin,
-}: {
-  lowMargin?: boolean;
-  id?: string;
-  children: JSX.Element;
-}) {
+  largeContent = false,
+  ...rest
+}: ShowcaseProps) {
   return (
     <section
-      id={id}
-      className={`${
-        lowMargin ? "mt-[50px] lg:mt-[100px]" : "mt-[150px] lg:mt-[200px]"
-      } max-w-[740px] mx-auto text-slate-200 font-poppins`}
+      className={cn(
+        "mx-auto",
+        largeContent ? "max-w-[1210px]" : "max-w-[740px]",
+        "text-slate-200 font-poppins",
+        `${lowMargin ? "mt-[50px] lg:mt-[100px]" : "mt-[150px] lg:mt-[200px]"}`,
+        rest.className,
+      )}
+      {...rest}
     >
       {children}
     </section>

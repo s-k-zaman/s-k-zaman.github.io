@@ -21,11 +21,14 @@ function MyExperiences() {
   };
   return (
     <Showcase>
-      <TitleWithBar title="Experiences">
-        <div id="experiences" className="flex flex-col gap-[20px]">
-          <Btn name="In my resume, click to download 📥"primary onClick={handleCVDownload} />
-        </div>
-      </TitleWithBar>
+      <TitleWithBar title="Experiences" />
+      <div id="experiences" className="flex flex-col gap-[20px]">
+        <Btn
+          name="In my resume, click to download 📥"
+          primary
+          onClick={handleCVDownload}
+        />
+      </div>
     </Showcase>
   );
 }

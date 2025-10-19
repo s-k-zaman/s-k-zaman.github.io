@@ -1,54 +1,40 @@
 import classes from "./featureProject.module.css";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import ImageGallery, { Image } from "./ImageGallery";
-import { cn } from "../../lib/tailwindCss";
+import { classNames } from "../../lib/tailwindCss";
 
 function HL({ children }: { children: JSX.Element | string }) {
   return <span className="text-primary-text">{children}</span>;
 }
 
 type Props = {
-  title: string;
-  description: React.ReactNode;
   reversed?: boolean;
+  title: string;
   images?: Image[];
+  imgClass: string;
+  popText: string | JSX.Element;
   tools: string[];
   github?: string;
-  privateGithub?: boolean;
-  disclaimer?: React.ReactNode;
-  privateGithubAccessText?: string;
   website?: string;
 };
 
-function FeatureProjectNew({
-  title,
-  description,
-  reversed,
-  images,
-  tools,
-  github,
-  privateGithub = false,
-  privateGithubAccessText = "",
-  website,
-}: Props) {
+function FeatureProject(props: Props) {
+  // IMPORTANT: some animations are dependent on module.css file, BE CAREFUL BEFORE EDITING.
   return (
     <div
-      className={cn(
-        "tb1",
-                "w-full",
-        "bg-card",
-        "grid grid-cols-1 sm:grid-cols-2",
-        (!images || images?.length < 1) && "grid-cols-1",
-        "rounded-[20px]",
-      )}
+      className={`flex ${
+        props.reversed ? "flex-row-reverse" : "flex-row"
+      }  items-stretch p-0 ${classes.featured} ${
+        props.reversed ? classes.featured_reversed : classes.featured_normal
+      }`}
     >
       <div
-        className={cn(
-          `hidden lg:block basis-[50%] shrink-0 bg-cover bg-center rounded-[5px] aspect-video`,
+        className={classNames(
+          `hidden lg:block basis-[50%] shrink-0 ${props.imgClass} bg-cover bg-center rounded-[5px] aspect-video`,
         )}
       >
-        {website || github ? (
-          <a href={website || github} target="_blank">
+        {props.website || props.github ? (
+          <a href={props.website || props.github} target="_blank">
             <div className="w-full h-full bg-primary-text/25 backdrop-brightness-75 transition-all"></div>
           </a>
         ) : (
@@ -64,34 +50,34 @@ function FeatureProjectNew({
       {/* </div> */}
       <div
         className={`relative basis-full font-poppins flex flex-col ${
-          reversed ? "items-start" : "items-end"
-        } gap-[20px] lg:bg-none bg-cover bg-center`}
+          props.reversed ? "items-start" : "items-end"
+        } gap-[20px] ${props.imgClass} lg:bg-none bg-cover bg-center`}
       >
         <div className="absolute lg:hidden w-full h-full bg-[#020133]/75 backdrop-brightness-50 transition-all" />
         <div
           className={`mt-0 flex flex-col w-full px-4 pt-4 lg:p-0 z-10 ${
-            reversed ? "items-start" : "items-start lg:items-end"
+            props.reversed ? "items-start" : "items-start lg:items-end"
           }`}
         >
           {/* <div className="w-fit font-medium text-x text-secondary-dark lg:text-primary-text"> */}
           {/*   Featured Project */}
           {/* </div> */}
           <h2 className="w-fit font-medium text-3xl text-primary-text">
-            {title}
+            {props.title}
           </h2>
         </div>
         <div className="z-10 text-secondary-text text-normal w-full lg:w-[140%] bg-none lg:bg-secondary-bg shadow-deep rounded-[5px] px-4 py-5 transition-all duration-500">
-          {description}
+          {props.popText}
         </div>
         <div
           className={`w-full lg:w-[140%] z-10 font-normal text-sm flex flex-row flex-wrap px-4 ${
-            reversed
+            props.reversed
               ? "items-start [&>*]:mr-auto lg:pl-4 lg:pr-0 lg:-translate-x-[33%]"
               : "items-end [&>*]:ml-auto lg:pr-4 lg:pl-0 lg:translate-x-[33%]"
           }  gap-[8px] px-1`}
         >
-          {tools.map((tool, idx) => {
-            if (idx + 1 === tools.length) {
+          {props.tools.map((tool, idx) => {
+            if (idx + 1 === props.tools.length) {
               return <code key={`tool-${idx}`}>{tool}</code>;
             }
             return <code key={`tool-${idx}`}>{tool},</code>;
@@ -99,23 +85,23 @@ function FeatureProjectNew({
         </div>
         <div
           className={`z-10 pb-4 pl-4 lg:p-0 flex flex-row gap-[10px] ${
-            reversed
+            props.reversed
               ? "items-start lg:[&>*]:mr-auto"
               : "items-end lg:[&>*]:ml-auto"
           } w-full text-secondary-text`}
         >
-          {github && (
+          {props.github && (
             <a
-              href={github}
+              href={props.github}
               target="_blank"
               className="hover:text-white flex gap-1 items-center"
             >
               <FiGithub /> Github
             </a>
           )}
-          {website && (
+          {props.website && (
             <a
-              href={website}
+              href={props.website}
               target="_blank"
               className="hover:text-primary-text flex gap-1 items-center"
             >
@@ -128,5 +114,5 @@ function FeatureProjectNew({
   );
 }
 
-export default FeatureProjectNew;
+export default FeatureProject;
 export { HL };

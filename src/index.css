@@ -7,11 +7,46 @@
 
 @font-face {
   font-family: "minecraft";
-  src: local("minecraft"),
+  src:
+    local("minecraft"),
     url("./assets/fonts/minecraft/MinecraftRegular-Bmg3.otf") format("truetype");
   font-weight: bold;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* test borders */
+.tb1 {
+  @apply border border-yellow-400;
+}
+.tb2 {
+  @apply border border-emerald-400;
+}
+.tb3 {
+  @apply border border-red-400;
+}
+.tb4 {
+  @apply border border-[rgb(6,182,212)];
+}
+.tb5 {
+  @apply border border-[rgb(168,85,247)];
+}
+.dark {
+  .tb1 {
+    @apply border border-yellow-300;
+  }
+  .tb2 {
+    @apply border border-emerald-300;
+  }
+  .tb3 {
+    @apply border border-red-300;
+  }
+  .tb4 {
+    @apply border-[rgb(103,232,249)];
+  }
+  .tb5 {
+    @apply border-[rgb(216,180,254)];
+  }
 }
