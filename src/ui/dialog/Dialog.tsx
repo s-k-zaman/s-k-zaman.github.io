@@ -2,6 +2,7 @@ import * as DialogPrimitive from "@radix-ui/react-dialog";
 // import { Dialog as DialogPrimitive } from "@radix-ui/react-dialog";
 import React, { useEffect, useState, ReactNode, useMemo } from "react";
 import { classNames } from "../../lib/tailwindCss";
+import { IoClose } from "react-icons/io5";
 
 export type DialogProps = {
   trigger: React.ReactNode;
@@ -11,10 +12,11 @@ export type DialogProps = {
   description?: string | ReactNode;
   children?: ReactNode;
   footer?: ReactNode;
-  size?: "sm" | "md" | "lg";
+  size?: "fit" | "sm" | "md" | "lg" | "xl";
   noEscapeClose?: boolean;
   noOutsideClose?: boolean;
-  closeButton?: boolean;
+  noCloseButton?: boolean;
+  enableOverflow?: boolean;
   className?: string;
   triggerClassName?: string;
   titleClassName?: string;
@@ -38,7 +40,8 @@ export function Dialog({
   children,
   footer,
   size = "md",
-  closeButton = false,
+  enableOverflow = false,
+  noCloseButton = false,
   noEscapeClose = false,
   noOutsideClose = false,
   className = "",
@@ -99,7 +102,7 @@ export function Dialog({
         <DialogPrimitive.Overlay
           className={classNames(
             "z-40",
-            "fixed inset-0 bg-black/50 backdrop-blur-sm",
+            "fixed transition-opacity inset-0 bg-black/50 backdrop-blur-sm",
             overlayClassName,
           )}
         />
@@ -112,57 +115,77 @@ export function Dialog({
           }}
           className={classNames(
             "z-50",
-            "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg w-full max-w-[90vw] focus:outline-none",
-            size === "sm" && "max-w-sm",
-            size === "md" && "max-w-md",
-            size === "lg" && "max-w-lg",
-            className,
+            "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",
+            "focus:outline-none",
           )}
         >
-          {title && (
+          {/* HACK: Wrapper fix proper animation of content box */}
+          <div
+            className={classNames(
+              "animate-fade-in-up",
+              "rounded-[20px] p-6 lg:p-8 shadow-lg w-full max-w-[90vw] focus:outline-none",
+              "shadow-2xl shadow-white/5 bg-card text-white/80",
+              "max-h-[95vh]",
+              enableOverflow ? "overflow-auto" : "overflow-visible",
+              size === "sm" && "max-w-sm",
+              size === "md" && "max-w-md",
+              size === "lg" && "max-w-lg",
+              size === "xl" && "max-w-xl",
+              size === "fit" && "max-w-fit",
+              className,
+            )}
+          >
+            {/* Always render a title, but visually hide it if not provided */}
             <DialogPrimitive.Title
               className={classNames(
-                "text-lg font-semibold mb-2",
+                "text-2xl font-semibold mb-2",
+                description && "mb-0",
                 titleClassName,
+                !title && "sr-only",
               )}
             >
-              {title}
+              {title || "Dialog"}
             </DialogPrimitive.Title>
-          )}
-          {description && (
-            <DialogPrimitive.Description
-              className={classNames(
-                "text-sm mb-4 text-gray-500 dark:text-gray-400",
-                descriptionClassName,
-              )}
-            >
-              {description}
-            </DialogPrimitive.Description>
-          )}
-
-          <div className="mb-4">{children}</div>
-
-          {footer && (
-            <div
-              className={classNames(
-                "flex justify-end space-x-2",
-                footerClassName,
-              )}
-            >
-              {footer}
-            </div>
-          )}
-
-          {closeButton && (
-            <DialogPrimitive.Close asChild>
-              <button
-                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-                aria-label="Close"
+            {description && (
+              <DialogPrimitive.Description
+                className={classNames(
+                  "text-sm mb-4 text-gray-500 dark:text-gray-400",
+                  descriptionClassName,
+                )}
               >
-                ✕
-              </button>
-            </DialogPrimitive.Close>
-          )}
+                {description}
+              </DialogPrimitive.Description>
+            )}
+
+            <div className="mb-4">{children}</div>
+
+            {footer && (
+              <div
+                className={classNames(
+                  "flex justify-end space-x-2",
+                  footerClassName,
+                )}
+              >
+                {footer}
+              </div>
+            )}
+
+            {!noCloseButton && (
+              <DialogPrimitive.Close asChild>
+                <button
+                  className={classNames(
+                    "absolute top-[6px] right-[8px]",
+                    "p-[5px]",
+                    "text-gray-500 hover:text-gray-700 dark:hover:text-gray-300",
+                    "flex items-center justify-center",
+                  )}
+                  aria-label="Close"
+                >
+                  <IoClose size={22} />
+                </button>
+              </DialogPrimitive.Close>
+            )}
+          </div>
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>
     </DialogPrimitive.Root>

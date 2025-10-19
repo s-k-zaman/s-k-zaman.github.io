@@ -10,9 +10,27 @@ function IHaveBuilt() {
         <div id="featured" className="flex flex-col gap-[94px]">
           <Dialog
             trigger={<button>dialog click</button>}
+            noCloseButton
+            // noOutsideClose
+            name="test-dialog"
+            title="This is a test Dialog?"
+            description="description of modal/dialog"
+            size="xl"
+            footer={
+              <>
+                <p>foot item1</p>
+                <p>foot item1</p>
+              </>
+            }
             // name="test-dialog"
           >
-            <p>this is test dialog screen</p>
+            <p>this is test dialog content</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
+              est ipsam ipsa quasi libero minus, nesciunt doloremque recusandae
+              ex illum deleniti suscipit doloribus, fugiat dolorem quas eveniet
+              voluptates voluptate ad!
+            </p>
           </Dialog>
           <FeatureProject
             title="Stealthwriter Humnaizer"
