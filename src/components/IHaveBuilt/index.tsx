@@ -10,8 +10,8 @@ function IHaveBuilt() {
         <div id="featured" className="flex flex-col gap-[94px]">
           <Dialog
             trigger={<button>dialog click</button>}
-            noCloseButton
-            // noOutsideClose
+            // noCloseButton
+            noOutsideClose
             name="test-dialog"
             title="This is a test Dialog?"
             description="description of modal/dialog"

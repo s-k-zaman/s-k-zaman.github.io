@@ -3,6 +3,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        xs: "360px",
+      },
       fontFamily: {
         minecraft: ["minecraft"],
         poppins: ["Poppins", "sans-serif"],
@@ -38,6 +41,7 @@ module.exports = {
         "featured-muni-out": "url('/featured/muni-out.png')",
         "featured-research-xml": "url('/featured/research-xml.png')",
       },
+      // animations
       keyframes: {
         "fade-in-up": {
           from: { opacity: 0, transform: "translateY(10px)" },

@@ -18,6 +18,7 @@ export type DialogProps = {
   noCloseButton?: boolean;
   enableOverflow?: boolean;
   className?: string;
+  containerClassName?: string;
   triggerClassName?: string;
   titleClassName?: string;
   descriptionClassName?: string;
@@ -45,6 +46,7 @@ export function Dialog({
   noEscapeClose = false,
   noOutsideClose = false,
   className = "",
+  containerClassName = "",
   triggerClassName = "",
   titleClassName = "",
   descriptionClassName = "",
@@ -117,21 +119,25 @@ export function Dialog({
             "z-50",
             "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",
             "focus:outline-none",
+            "w-full max-w-[20rem] xs:max-w-[23rem]",
+            "max-h-[95vh]",
+            size === "sm" && "sm:max-w-sm",
+            size === "md" && "sm:max-w-md",
+            size === "lg" && "sm:max-w-lg",
+            size === "xl" && "sm:max-w-xl",
+            size === "fit" && "sm:max-w-fit",
+            containerClassName,
           )}
         >
           {/* HACK: Wrapper fix proper animation of content box */}
           <div
             className={classNames(
-              "animate-fade-in-up",
-              "rounded-[20px] p-6 lg:p-8 shadow-lg w-full max-w-[90vw] focus:outline-none",
+              "w-full",
+              "rounded-[20px]",
               "shadow-2xl shadow-white/5 bg-card text-white/80",
-              "max-h-[95vh]",
               enableOverflow ? "overflow-auto" : "overflow-visible",
-              size === "sm" && "max-w-sm",
-              size === "md" && "max-w-md",
-              size === "lg" && "max-w-lg",
-              size === "xl" && "max-w-xl",
-              size === "fit" && "max-w-fit",
+              "animate-fade-in-up",
+              "p-6 lg:p-8 ",
               className,
             )}
           >
