@@ -6,7 +6,7 @@ function IHaveBuilt() {
   return (
     <Showcase largeContent>
       <TitleWithBar title="Some Things I’ve Built" />
-      <div id="featured" className="flex flex-col gap-[94px]">
+      <div id="featured" className="flex flex-col gap-[51px] sm:gap-[94px]">
         <FeatureProject
           reversed
           title="todox"

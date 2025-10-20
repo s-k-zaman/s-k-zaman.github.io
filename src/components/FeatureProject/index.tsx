@@ -49,19 +49,20 @@ export default function FeatureProject({
   privateGithubAccessText = "Why you want this project?",
   website,
 }: Props) {
+  const haveImage = Boolean(images && images.length);
   return (
     <div
       className={cn(
         "w-full",
         "bg-card",
-        "flex gap-[10px]",
-        reversed && "sm:flex-row-reverse",
+        "flex flex-col-reverse gap-[10px] md:flex-row",
+        reversed && "md:flex-row-reverse",
         "rounded-[20px] p-[5px]",
       )}
     >
       <div
         className={cn(
-          "shrink-0 basis-[40%] ",
+          haveImage && "shrink-0 basis-[40%] ",
           "overflow-hidden rounded-[20px]",
           "max-h-[363px]",
         )}
@@ -87,7 +88,7 @@ export default function FeatureProject({
               disclaimer={disclaimer}
               noTabIndex
             >
-              <h2 className="w-fit font-medium text:2xl xl:text-3xl text-primary-text hover:underline">
+              <h2 className="w-fit font-medium text-2xl xl:text-3xl text-primary-text hover:underline">
                 {title}
               </h2>
             </AccessGithub>
