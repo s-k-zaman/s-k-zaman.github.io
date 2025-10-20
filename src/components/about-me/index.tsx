@@ -7,7 +7,7 @@ function About() {
   return (
     <Showcase id="about-me">
       <TitleWithBar title="About me" />
-      <div className="flex flex-col md:flex-row gap-11">
+      <div className="flex flex-col-reverse gap-[115px] md:flex-row md:gap-11">
         <div className="basis-full flex flex-col justify-start gap-10">
           <p className="text-justify">
             I take pride in my detail-oriented approach to writing clean and
