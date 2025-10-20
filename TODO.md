@@ -6,6 +6,8 @@
 - [x] images are opeing in large view for mobiles
 - [x] image should be on top in about, in mobile
 - [ ] modals/dialog should close on back button.
+- [ ] images gallery should close on back button.
+- [ ] make bg dark in mobiles for image gallery view.
 - [ ] make readable contents smaller. 
 
 # BUGs

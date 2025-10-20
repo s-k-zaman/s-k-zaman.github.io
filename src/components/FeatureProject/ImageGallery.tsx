@@ -64,6 +64,7 @@ export default function ImageGallery({
                 overflow: "hidden",
                 cursor: "pointer",
                 flexShrink: "0",
+                borderRadius: "5px",
               });
 
               const img = document.createElement("img");
@@ -151,6 +152,7 @@ export default function ImageGallery({
   return (
     <Gallery
       options={{
+        bgOpacity: 0.8,
         showHideAnimationType: images.length === 1 ? "zoom" : "fade", // "zoom" not looking good for hidden images
         zoom: true,
         wheelToZoom: true,
