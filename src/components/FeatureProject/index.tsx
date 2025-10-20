@@ -87,6 +87,7 @@ export default function FeatureProject({
           {github ? (
             <AccessGithub
               title={title}
+              uniqueIdentifier="title"
               github={github}
               privateGithub={privateGithub}
               privateGithubAccessText={privateGithubAccessText}
@@ -134,6 +135,7 @@ export default function FeatureProject({
             >
               <AccessGithub
                 title={title}
+                uniqueIdentifier="btn"
                 github={github}
                 privateGithub={privateGithub}
                 privateGithubAccessText={privateGithubAccessText}

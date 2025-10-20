@@ -16,6 +16,7 @@ export type DialogProps = {
   noEscapeClose?: boolean;
   noOutsideClose?: boolean;
   noCloseButton?: boolean;
+  noCloseOnBackButton?: boolean;
   enableOverflow?: boolean;
   className?: string;
   containerClassName?: string;
@@ -46,6 +47,7 @@ export function Dialog({
   noCloseButton = false,
   noEscapeClose = false,
   noOutsideClose = false,
+  noCloseOnBackButton = false,
   className = "",
   containerClassName = "",
   triggerClassName = "",
@@ -54,24 +56,25 @@ export function Dialog({
   footerClassName = "",
   overlayClassName = "",
 }: DialogProps) {
-  const [modalState, setModalState] = useState(DIALOG_STATE.CLOSED);
+  const isNamedDialog = !!name;
+  const [dialogState, setDialogState] = useState(DIALOG_STATE.CLOSED);
 
-  const searchParams = new URLSearchParams(window.location.search);
-  const shouldOpen = name ? searchParams.get("dialog") === name : false;
+  const initialShouldOpen = isNamedDialog
+    ? new URLSearchParams(window.location.search).get("dialog") === name
+    : false;
 
-  useEffect(() => {
-    if (modalState === DIALOG_STATE.CLOSED && shouldOpen) {
-      setModalState(DIALOG_STATE.OPEN);
+  if (isNamedDialog) {
+    if (dialogState === DIALOG_STATE.CLOSED && initialShouldOpen) {
+      setDialogState(DIALOG_STATE.OPEN);
     }
-
-    if (modalState === DIALOG_STATE.CLOSING && !shouldOpen) {
-      setModalState(DIALOG_STATE.CLOSED);
+    if (dialogState === DIALOG_STATE.CLOSING && !initialShouldOpen) {
+      setDialogState(DIALOG_STATE.CLOSED);
     }
-  }, [shouldOpen, modalState]);
+  }
 
   const handleOpenChange = (open: boolean) => {
-    if (!name) {
-      setModalState(open ? DIALOG_STATE.OPEN : DIALOG_STATE.CLOSING);
+    if (!isNamedDialog) {
+      setDialogState(open ? DIALOG_STATE.OPEN : DIALOG_STATE.CLOSING);
       return;
     }
 
@@ -86,13 +89,32 @@ export function Dialog({
 
     const newUrl = `${window.location.pathname}?${params.toString()}`;
     window.history.pushState({}, "", newUrl);
-
-    setModalState(open ? DIALOG_STATE.OPEN : DIALOG_STATE.CLOSING);
+    setDialogState(open ? DIALOG_STATE.OPEN : DIALOG_STATE.CLOSING);
   };
+
+  // Handle URL changes, including browser back/forward buttons
+  useEffect(() => {
+    if (noCloseOnBackButton) return;
+    // TODO: add closing of no named dialog [check how is it possible]
+    if (!isNamedDialog) return;
+
+    const handlePopState = (event: PopStateEvent) => {
+      const searchParams = new URLSearchParams(window.location.search);
+      const shouldBeOpen = searchParams.get("dialog") === name;
+
+      // Only update state if the URL change affects this dialog
+      if (shouldBeOpen !== (dialogState === DIALOG_STATE.OPEN)) {
+        setDialogState(shouldBeOpen ? DIALOG_STATE.OPEN : DIALOG_STATE.CLOSING);
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, [name, isNamedDialog, noCloseOnBackButton, dialogState]);
 
   return (
     <DialogPrimitive.Root
-      open={modalState === DIALOG_STATE.OPEN}
+      open={dialogState === DIALOG_STATE.OPEN}
       onOpenChange={handleOpenChange}
     >
       <DialogPrimitive.Trigger

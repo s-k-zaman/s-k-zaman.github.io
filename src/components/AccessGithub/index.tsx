@@ -6,6 +6,7 @@ import { RequestAccess } from "./RequestAccess";
 
 type Props = {
   title: React.ReactNode;
+  uniqueIdentifier: string;
   github?: string;
   privateGithub?: boolean;
   privateGithubAccessText?: string;
@@ -16,6 +17,7 @@ type Props = {
 
 function AccessGithub({
   title,
+  uniqueIdentifier,
   github,
   privateGithub = false,
   privateGithubAccessText = "",
@@ -23,7 +25,6 @@ function AccessGithub({
   children,
   noTabIndex = false,
 }: Props) {
-
   if (!github) return null;
 
   if (!privateGithub) {
@@ -42,7 +43,7 @@ function AccessGithub({
       description={<>To see the project assets you need access in GitHub.</>}
       className={cn()}
       size="2xl"
-      name={`gh-${ghRepoName(github)}`}
+      name={`gh-${ghRepoName(github)}-${uniqueIdentifier}`}
       tabIndex={noTabIndex ? -1 : 0}
     >
       <div>
