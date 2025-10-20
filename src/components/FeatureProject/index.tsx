@@ -3,6 +3,7 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 import ImageGallery, { Image } from "./ImageGallery";
 import { cn } from "../../lib/tailwindCss";
 import AccessGithub from "../AccessGithub";
+import { ghRepoName } from "../../lib/github";
 
 export function HL({ children }: { children: JSX.Element | string }) {
   return <span className="text-primary-text">{children}</span>;
@@ -67,7 +68,10 @@ export default function FeatureProject({
           "max-h-[363px]",
         )}
       >
-        <ImageGallery images={images || []} />
+        <ImageGallery
+          uniqueId={"project-" + ghRepoName(github || "")}
+          images={images || []}
+        />
       </div>
       <div
         className={cn(

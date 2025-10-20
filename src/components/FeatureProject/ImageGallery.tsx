@@ -15,9 +15,11 @@ export type Image = {
 
 export default function ImageGallery({
   images,
+  uniqueId,
   displayImageClassname = "",
 }: {
   images: Image[];
+  uniqueId?: string;
   displayImageClassname?: string;
 }) {
   if (!images || images.length === 0) return null;
@@ -151,6 +153,7 @@ export default function ImageGallery({
 
   return (
     <Gallery
+      id={uniqueId || undefined}
       options={{
         bgOpacity: 0.8,
         showHideAnimationType: images.length === 1 ? "zoom" : "fade", // "zoom" not looking good for hidden images

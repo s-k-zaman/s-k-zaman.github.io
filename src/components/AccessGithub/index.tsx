@@ -1,3 +1,4 @@
+import { ghRepoName } from "../../lib/github";
 import { cn } from "../../lib/tailwindCss";
 import { Dialog } from "../../ui/dialog";
 import { Disclaimer } from "../FeatureProject";
@@ -22,17 +23,6 @@ function AccessGithub({
   children,
   noTabIndex = false,
 }: Props) {
-  const ghRepoName = (github: string) => {
-    if (!github) return "";
-    // Remove trailing slashes, fragments (#), and .git suffix
-    const cleaned = github
-      .trim()
-      .replace(/\/+$/, "") // remove trailing slashes
-      .replace(/#.*$/, "") // remove fragments
-      .replace(/\.git$/, ""); // remove .git at end
-    const parts = cleaned.split("/");
-    return parts[parts.length - 1] || "";
-  };
 
   if (!github) return null;
 
