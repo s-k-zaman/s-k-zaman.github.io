@@ -9,6 +9,11 @@
 - [x] images gallery should close on back button.
 - [x] make bg dark in mobiles for image gallery view.
 - [ ] make readable contents smaller. 
+- [ ] add sticky header.
+- [ ] have nav sections
+- [ ] add icon to: +1more image
+- [ ] update twitter icon to X icon.
 
 # BUGs
 - [x] opening two dialog after reloading when named dialog is already open(same named dialog was present.)
+- [ ] on mobile landscape image is huge!! image gallery.

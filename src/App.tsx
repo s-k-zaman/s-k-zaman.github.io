@@ -18,7 +18,7 @@ function App() {
       <About />
       <IHaveBuilt />
       <MyExperiences />
-      <OtherProjects />
+      {/* <OtherProjects /> */}
       <Footer />
     </div>
   );

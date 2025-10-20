@@ -155,7 +155,7 @@ export default function ImageGallery({
     <Gallery
       id={uniqueId || undefined}
       options={{
-        bgOpacity: 0.8,
+        bgOpacity: 0.9,
         showHideAnimationType: images.length === 1 ? "zoom" : "fade", // "zoom" not looking good for hidden images
         zoom: true,
         wheelToZoom: true,

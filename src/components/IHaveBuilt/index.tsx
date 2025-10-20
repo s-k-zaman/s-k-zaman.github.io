@@ -163,6 +163,7 @@ function IHaveBuilt() {
             "json",
           ]}
           github="https://github.com/s-k-zaman/casemine-scraper#"
+          privateGithub
         />
         <FeatureProject
           title="Zara Products Scraper"
@@ -207,6 +208,7 @@ function IHaveBuilt() {
             "notification",
           ]}
           github="https://github.com/s-k-zaman/twitter-mention-reply"
+          privateGithub
         />
         <FeatureProject
           title="LinkedIn Mention Reply Bot"
@@ -292,6 +294,18 @@ function IHaveBuilt() {
           tools={["react", "tailwindCss", "axios", "redux", "firebase"]}
           github="https://github.com/s-k-zaman/netflix-clone"
           website="https://netfilx-clone-305ab.web.app/"
+        />
+        <FeatureProject
+          title="XVG to CSV"
+          images={[]}
+          description={
+            <>
+              A simple script to convert gromacs(used in molecular simulation)
+              output file of .XVG format to csv files
+            </>
+          }
+          tools={["python", "numpy", "argparse"]}
+          github="https://github.com/s-k-zaman/xvg-to-csv"
         />
       </div>
     </Showcase>

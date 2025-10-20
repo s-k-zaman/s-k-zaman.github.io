@@ -66,7 +66,9 @@ function Header() {
         </a>
       </div>
       <div className="flex gap-5">
-        <Btn asLink href="#about-me" name="About" />
+        <Btn asLink href="#featured" name="Projects" />
+        <Btn asLink href="#get-in-touch" name="Connect" />
+        {/* <Btn asLink href="#about-me" name="About" /> */}
         <Btn name="Resume" primary onClick={handleCVDownload} />
       </div>
     </div>
