@@ -151,17 +151,17 @@ export default function ImageGallery({
         padding: { top: 40, bottom: 40, left: 20, right: 20 },
         // TODO: its not working
         initialZoomLevel: 0.7,
-        sinitialZoomLevel: (zoomLevelObject) => {
-          const { itemData, fit, pswp } = zoomLevelObject;
-          const imageWidth = itemData.width;
-          const imageHeight = itemData.height;
-          const vw = pswp?.viewportSize.x;
-          const vh = pswp?.viewportSize.y;
-          if (!vw || !vh || !imageWidth || !imageHeight) return fit;
-          // If image is smaller than 80% of viewport → keep it natural size (zoom = 1)
-          const fitsViewport = imageWidth < vw * 0.8 && imageHeight < vh * 0.8;
-          return fitsViewport ? 1 : fit; // 1 = natural size, fit = default “fit to screen”
-        },
+        // initialZoomLevel: (zoomLevelObject) => {
+        //   const { itemData, fit, pswp } = zoomLevelObject;
+        //   const imageWidth = itemData.width;
+        //   const imageHeight = itemData.height;
+        //   const vw = pswp?.viewportSize.x;
+        //   const vh = pswp?.viewportSize.y;
+        //   if (!vw || !vh || !imageWidth || !imageHeight) return fit;
+        //   // If image is smaller than 80% of viewport → keep it natural size (zoom = 1)
+        //   const fitsViewport = imageWidth < vw * 0.8 && imageHeight < vh * 0.8;
+        //   return fitsViewport ? 1 : fit; // 1 = natural size, fit = default “fit to screen”
+        // },
       }}
       uiElements={[captionUiElement, thumbnailsIndicator].filter(Boolean)}
     >
