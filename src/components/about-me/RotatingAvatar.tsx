@@ -17,7 +17,7 @@ export default function RotatingAvatar() {
       className={`group relative cursor-pointer [perspective:1000px] ${classes.rotating_avatar_container}`}
       onClick={handleClickRotate}
       onMouseLeave={handleMouseLeave}
-      // TODO: on mobile not returning on loseing focus
+      onTouchEnd={handleMouseLeave}
     >
       <span
         className={`absolute top-[10%] left-[7%] z-10 bg-transparent font-minecraft text-primary-text transition animate-pulse text-sm ${
