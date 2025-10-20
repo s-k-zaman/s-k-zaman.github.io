@@ -4,9 +4,9 @@ import FeatureProject, { HL } from "../FeatureProject";
 
 function IHaveBuilt() {
   return (
-    <Showcase largeContent>
-      <TitleWithBar title="Some Things I’ve Built" />
-      <div id="featured" className="flex flex-col gap-[51px] sm:gap-[94px]">
+    <Showcase largeContent id="featured">
+      <TitleWithBar title="Some projects I have worked on" />
+      <div className="flex flex-col gap-[51px] sm:gap-[94px]">
         <FeatureProject
           reversed
           title="todox"
@@ -76,6 +76,7 @@ function IHaveBuilt() {
             "notification",
           ]}
           github="https://github.com/s-k-zaman/twitter-feed-scraper"
+          privateGithub
         />
         <FeatureProject
           title="Muni Landing Page"

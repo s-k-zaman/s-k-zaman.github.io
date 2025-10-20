@@ -51,7 +51,7 @@ function AccessGithub({
       title={<>This is private repository</>}
       description={<>To see the project assets you need access in GitHub.</>}
       className={cn()}
-      size="xl"
+      size="2xl"
       name={`gh-${ghRepoName(github)}`}
       tabIndex={noTabIndex ? -1 : 0}
     >

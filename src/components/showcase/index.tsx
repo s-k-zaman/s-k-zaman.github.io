@@ -23,7 +23,7 @@ function Showcase({
         "mx-auto",
         largeContent ? "max-w-[1210px]" : "max-w-[740px]",
         "text-slate-200 font-poppins",
-        `${lowMargin ? "mt-[50px] lg:mt-[100px]" : "mt-[150px] lg:mt-[200px]"}`,
+        lowMargin ? "mt-[50px] lg:mt-[100px]" : "mt-[150px] lg:mt-[200px]",
         rest.className,
       )}
       {...rest}

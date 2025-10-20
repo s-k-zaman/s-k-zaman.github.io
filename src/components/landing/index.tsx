@@ -3,13 +3,13 @@ import Showcase from "../showcase";
 
 function index() {
   return (
-    <Showcase lowMargin>
+    <Showcase lowMargin largeContent>
       <div className="flex flex-col items-start gap-5">
         <p className="text-primary-text font-minecraft text-sm">
           Hello there!, I'm
         </p>
         <h1 className="text-5xl font-medium text-[#BBC7E2]">Khairul Zaman.</h1>
-        <h1 className="text-4xl font-montserrat font-light text-[#9DA4B0]">
+        <h1 className="text-4xl font-montserrat font-medium text-[#9DA4B0]">
           I <span className="font-medium">build</span> things for the{" "}
           <span className="font-normal">web</span> and{" "}
           <span className="font-normal">linux</span>
@@ -24,7 +24,7 @@ function index() {
           solutions to meet project goals. I am confident that my expertise and
           experience can help your organization grow and achieve its goals.
         </p>
-        <Btn asLink href="#get-in-touch" name="Contact Me" focus />
+        <Btn asLink href="#featured" name="Check out my works" primary />
       </div>
     </Showcase>
   );

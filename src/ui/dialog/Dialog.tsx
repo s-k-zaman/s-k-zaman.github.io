@@ -1,5 +1,4 @@
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-// import { Dialog as DialogPrimitive } from "@radix-ui/react-dialog";
 import React, { useEffect, useState, ReactNode, useMemo } from "react";
 import { classNames } from "../../lib/tailwindCss";
 import { IoClose } from "react-icons/io5";
@@ -13,7 +12,7 @@ export type DialogProps = {
   description?: string | ReactNode;
   children?: ReactNode;
   footer?: ReactNode;
-  size?: "fit" | "sm" | "md" | "lg" | "xl";
+  size?: "fit" | "sm" | "md" | "lg" | "xl" | "2xl";
   noEscapeClose?: boolean;
   noOutsideClose?: boolean;
   noCloseButton?: boolean;
@@ -133,6 +132,7 @@ export function Dialog({
             size === "md" && "sm:max-w-md",
             size === "lg" && "sm:max-w-lg",
             size === "xl" && "sm:max-w-xl",
+            size === "2xl" && "sm:max-w-2xl",
             size === "fit" && "sm:max-w-fit",
             containerClassName,
           )}

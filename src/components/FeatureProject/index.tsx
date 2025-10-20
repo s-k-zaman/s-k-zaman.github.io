@@ -75,6 +75,7 @@ export default function FeatureProject({
           "flex flex-col justify-between",
           "relative basis-full font-poppins",
           "gap-[20px] lg:bg-none bg-cover bg-center",
+          !haveImage && "max-w-[1040px] mx-auto",
         )}
       >
         {/* title and description */}
