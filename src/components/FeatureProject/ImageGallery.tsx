@@ -109,11 +109,11 @@ export default function ImageGallery({
     appendTo: "wrapper",
     //@ts-ignore
     onInit: (el, pswp) => {
-      // ✅ Always reset innerHTML & apply styles safely
+      // Always reset innerHTML & apply styles safely
       el.innerHTML = "";
       Object.assign(el.style, {
         position: "absolute",
-        top: "10px",
+        top: window.innerWidth < 768 ? "40px" : "10px",
         left: "0",
         right: "0",
         textAlign: "center",
@@ -133,15 +133,23 @@ export default function ImageGallery({
         el.innerHTML = caption;
       };
 
-      // ✅ Make sure these events exist before binding
+      // Make sure these events exist before binding
       pswp.on("change", updateCaption);
       pswp.on("afterInit", updateCaption);
     },
   };
 
+  function isPhonePortrait() {
+    return window.matchMedia("(max-width: 600px) and (orientation: portrait)")
+      .matches;
+  }
+  const MOBILE_BREAKPOINT = 768;
+  function isMobile() {
+    return window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`).matches;
+  }
+
   return (
     <Gallery
-      // withCaption
       options={{
         showHideAnimationType: images.length === 1 ? "zoom" : "fade", // "zoom" not looking good for hidden images
         zoom: true,
@@ -149,19 +157,21 @@ export default function ImageGallery({
         secondaryZoomLevel: 1.2,
         maxZoomLevel: 2,
         padding: { top: 40, bottom: 40, left: 20, right: 20 },
-        // TODO: its not working
-        initialZoomLevel: 0.7,
-        // initialZoomLevel: (zoomLevelObject) => {
-        //   const { itemData, fit, pswp } = zoomLevelObject;
-        //   const imageWidth = itemData.width;
-        //   const imageHeight = itemData.height;
-        //   const vw = pswp?.viewportSize.x;
-        //   const vh = pswp?.viewportSize.y;
-        //   if (!vw || !vh || !imageWidth || !imageHeight) return fit;
-        //   // If image is smaller than 80% of viewport → keep it natural size (zoom = 1)
-        //   const fitsViewport = imageWidth < vw * 0.8 && imageHeight < vh * 0.8;
-        //   return fitsViewport ? 1 : fit; // 1 = natural size, fit = default “fit to screen”
-        // },
+        initialZoomLevel: ({ panAreaSize, fit, elementSize }) => {
+          if (isMobile()) {
+            return fit;
+          }
+          const imgW = elementSize?.x;
+          const imgH = elementSize?.y;
+          const vw = panAreaSize?.x;
+          const vh = panAreaSize?.y;
+
+          if (!vw || !vh || !imgW || !imgH) return fit;
+
+          const fitsViewport = imgW < vw * 0.8 && imgH < vh * 0.8;
+          const final = fitsViewport ? fit : 0.7;
+          return final;
+        },
       }}
       uiElements={[captionUiElement, thumbnailsIndicator].filter(Boolean)}
     >

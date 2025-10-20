@@ -2,11 +2,10 @@
 
 3dImage(glb): https://models.readyplayer.me/68f355e5ff35889121b69466.glb
 
-- [ ] FIX all todos comments(always)
 - [x] in mobile changing to avatar not working.(TAP working)
-- [ ] images are opeing in large view for mobiles
-- [ ] modals/dialog should close on back button.
+- [x] images are opeing in large view for mobiles
 - [x] image should be on top in about, in mobile
+- [ ] modals/dialog should close on back button.
 - [ ] make readable contents smaller. 
 
 # BUGs

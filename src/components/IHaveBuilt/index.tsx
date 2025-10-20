@@ -18,6 +18,12 @@ function IHaveBuilt() {
               width: 1920,
               caption: "todox: project TODOs management",
             },
+            {
+              original: "/featured/research-xml.png",
+              alt: "research-xml",
+              height: 1039,
+              width: 1739,
+            },
           ]}
           description={
             <>

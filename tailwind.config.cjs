@@ -31,18 +31,7 @@ module.exports = {
         deep: "0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05)",
         glow: "0px 5px 20px 2px rgba(139, 236, 233, 0.10)",
       },
-      backgroundImage: {
-        // TODO: remove these after using new FeatureProject
-        "featured-readease": "url('/featured/readease.png')",
-        "featured-test":
-          "url('https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
-        "featured-netflix":
-          "url('https://images.unsplash.com/photo-1637363990764-de84fd247b7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
-        "featured-todox": "url('/featured/todox.png')",
-        "featured-hostel-meal": "url('/featured/hostel-meal.png')",
-        "featured-muni-out": "url('/featured/muni-out.png')",
-        "featured-research-xml": "url('/featured/research-xml.png')",
-      },
+      backgroundImage: {},
       // animations
       keyframes: {
         "fade-in-up": {
