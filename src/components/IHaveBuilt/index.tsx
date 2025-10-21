@@ -14,15 +14,23 @@ function IHaveBuilt() {
             {
               original: "/featured/todox.png",
               alt: "todox: project todo management",
-              height: 1080,
               width: 1920,
+              height: 1080,
               caption: "todox: project TODOs management",
             },
             {
-              original: "/featured/research-xml.png",
-              alt: "research-xml",
-              height: 1039,
-              width: 1739,
+              original: "/featured/todox-2.png",
+              alt: "todox: options",
+              width: 1108,
+              height: 666,
+              caption: "todox: options",
+            },
+            {
+              original: "/featured/todox-3.png",
+              alt: "todox: installation & integration",
+              width: 1196,
+              height: 796,
+              caption: "todox: installation & integration",
             },
           ]}
           description={
@@ -41,8 +49,30 @@ function IHaveBuilt() {
             {
               original: "/featured/research-xml.png",
               alt: "research-xml",
-              height: 1039,
               width: 1739,
+              height: 1039,
+              caption: "xml result",
+            },
+            {
+              original: "/featured/research-xml-4.png",
+              alt: "research-xml results",
+              width: 1286,
+              height: 681,
+              caption: "extracted data in files",
+            },
+            {
+              original: "/featured/research-xml-2.png",
+              alt: "research-xml affiliations",
+              width: 1920,
+              height: 1080,
+              caption: "extracted affiliations",
+            },
+            {
+              original: "/featured/research-xml-3.png",
+              alt: "research-xml references",
+              width: 1920,
+              height: 1080,
+              caption: "extracted references",
             },
           ]}
           description={
@@ -90,8 +120,16 @@ function IHaveBuilt() {
             {
               original: "/featured/muni-out.png",
               alt: "muni landing page",
-              height: 1080,
               width: 1920,
+              height: 1080,
+              caption: "muni landing page",
+            },
+            {
+              original: "/featured/muni-out-2.png",
+              alt: "muni landing page 2",
+              width: 1920,
+              height: 1080,
+              caption: "muni landing page",
             },
           ]}
           description={
@@ -249,13 +287,42 @@ function IHaveBuilt() {
           privateGithub
         />
         <FeatureProject
-          title="ReadEase"
+          title="ReadEase- Read articles"
           images={[
             {
               original: "/featured/readease.png",
               alt: "readease",
-              height: 890,
               width: 1894,
+              height: 890,
+              caption: "Landing page",
+            },
+            {
+              original: "/featured/readease-2.png",
+              alt: "readease serarch",
+              width: 1920,
+              height: 1080,
+              caption: "serarching articles",
+            },
+            {
+              original: "/featured/readease-4.png",
+              alt: "readease admin",
+              width: 1920,
+              height: 1080,
+              caption: "admin side for control",
+            },
+            {
+              original: "/featured/readease-3.png",
+              alt: "readease article",
+              width: 1920,
+              height: 1080,
+              caption: "Read an articles with treeview",
+            },
+            {
+              original: "/featured/readease-5.png",
+              alt: "readease admin subject",
+              width: 1920,
+              height: 857,
+              caption: "admin side: subjects list",
             },
           ]}
           description={

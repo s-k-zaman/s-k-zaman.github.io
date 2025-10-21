@@ -64,7 +64,7 @@ export default function FeatureProject({
       <div
         className={cn(
           haveImage && "shrink-0 basis-[40%] ",
-          "overflow-hidden rounded-[20px]",
+          "overflow-hidden rounded-[16px]",
           "max-h-[363px]",
         )}
       >
