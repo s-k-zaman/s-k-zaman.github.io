@@ -13,6 +13,7 @@
 - [x] add icon to: +1more image
 - [x] update twitter icon to X icon.
 - [ ] make readable contents smaller. 
+- [ ] get icons for each tools being used(use map feature).
 
 # BUGs
 - [x] opening two dialog after reloading when named dialog is already open(same named dialog was present.)

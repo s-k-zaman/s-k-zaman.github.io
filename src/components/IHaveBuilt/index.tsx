@@ -36,10 +36,14 @@ function IHaveBuilt() {
           description={
             <>
               A simple CLI tool for managing Project wise TODO lists in Markdown
-              format, with tmux integration. Edit TODOs, Add a tasks, Specify
-              custom file.
+              format.
+              <br />
+              Works great with <HL>tmux</HL> integration and <HL>neovim</HL>.
+              <br />
+              Edit TODOs, Add a tasks, Specify custom file.
             </>
           }
+          disclaimer={<>Works best on Linux — still in active development</>}
           tools={["Go", "tmux", "pflag", "linux", "CLI"]}
           github="https://github.com/s-k-zaman/todox#"
         />
@@ -85,7 +89,23 @@ function IHaveBuilt() {
               publishing workflows.
             </>
           }
-          tools={["Grobid", "Spacy", "NL", "tei-XML", "pdfplumber", "lxml"]}
+          disclaimer={
+            <>
+              Can be used in automation pipeline. Human interaction is needed
+              for data accuracy.
+            </>
+          }
+          privateGithubAccessText="Not for SALE! used by company."
+          tools={[
+            "NL Processing",
+            "OCR",
+            "Grobid",
+            "Spacy",
+            "tei-XML",
+            "pdfplumber",
+            "lxml",
+            "English language",
+          ]}
           github="https://github.com/s-k-zaman/research-paper-to-xml.git"
           privateGithub
         />
@@ -108,6 +128,9 @@ function IHaveBuilt() {
               logging into Twitter and scraping recent posts from the home
               timeline.
             </>
+          }
+          disclaimer={
+            <>Respect X's usage policy to avoid over-usage of the server.</>
           }
           tools={[
             "python",
@@ -169,6 +192,7 @@ function IHaveBuilt() {
               and expenses using Excel spreadsheets as the data backend.
             </>
           }
+          disclaimer={<>Used and works best for hostel messes in India</>}
           tools={["Python", "pandas", "openpyxl", "pendulum", "fuzzy-search"]}
           github="https://github.com/s-k-zaman/auto-mealer-hostel"
         />
@@ -189,6 +213,12 @@ function IHaveBuilt() {
               documents using the StealthWriter.ai web service via Selenium
               browser automation. Helpful for content writers, academic writers
               processing large and multiple files in a day.
+            </>
+          }
+          disclaimer={
+            <>
+              This project is for educational and personal use. Please respect
+              StealthWriter.ai's terms of service.
             </>
           }
           tools={["python", "automation", "selenium"]}
@@ -214,6 +244,13 @@ function IHaveBuilt() {
               tool automates the process of downloading legal documents,
               handling CAPTCHAs, and managing large-scale data extraction very
               fast(parallel download).
+            </>
+          }
+          disclaimer={
+            <>
+              This project is for educational and research purposes only. Ensure
+              compliance with Casemine's terms of service and applicable laws
+              when using this scraper.
             </>
           }
           tools={[
@@ -246,6 +283,7 @@ function IHaveBuilt() {
               multiple color variants.
             </>
           }
+          disclaimer={<>Use responsibly and respect Zara's terms of service</>}
           tools={[
             "python",
             "automation",
@@ -274,6 +312,12 @@ function IHaveBuilt() {
             <>
               An automated Twitter bot that monitors mentions and replies to
               them using Selenium browser automation.
+            </>
+          }
+          disclaimer={
+            <>
+              Tested and works reliably with X (Twitter) web interface. <br />
+              Best suited for personal or small-scale use.
             </>
           }
           tools={[
@@ -306,6 +350,12 @@ function IHaveBuilt() {
               platform.
             </>
           }
+          disclaimer={
+            <>
+              Designed for controlled, personal use on LinkedIn (automation
+              limits apply)
+            </>
+          }
           tools={["python", "automation", "selenium", "bot", "headless"]}
           github="https://github.com/s-k-zaman/linkedin-mention-reply"
           privateGithub
@@ -329,6 +379,12 @@ function IHaveBuilt() {
               Google Lens and web scraping.
             </>
           }
+          disclaimer={
+            <>
+              Experimental project demonstrating image-to-product matching with
+              Google Lens
+            </>
+          }
           tools={[
             "python",
             "automation",
@@ -343,7 +399,7 @@ function IHaveBuilt() {
           privateGithub
         />
         <FeatureProject
-          title="ReadEase- Read articles"
+          title="ReadEase.in- Read articles"
           images={[
             {
               original: "/featured/readease.png",
@@ -390,8 +446,16 @@ function IHaveBuilt() {
               <HL>slate-react</HL>.
             </>
           }
+          disclaimer={
+            <>
+              Full-stack startup project (client, admin, and server) — website
+              currently offline
+            </>
+          }
           tools={["NextJs", "react", "Ts", "Node", "MongoDB", "JWT"]}
-          website="https://www.readease.in"
+          // website="https://www.readease.in"
+          github="https://github.com/s-k-zaman/readease-client.git"
+          privateGithubAccessText="Why you need codes? and which repo(client, admin, server)?"
           privateGithub
         />
         <FeatureProject
