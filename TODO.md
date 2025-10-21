@@ -9,8 +9,8 @@
 - [x] images gallery should close on back button.
 - [x] make bg dark in mobiles for image gallery view.
 - [ ] make readable contents smaller. 
-- [ ] add sticky header.
-- [ ] have nav sections
+- [x] add sticky header.
+- [x] have nav sections
 - [ ] add icon to: +1more image
 - [ ] update twitter icon to X icon.
 

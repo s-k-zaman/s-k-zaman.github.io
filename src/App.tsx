@@ -7,19 +7,27 @@ import LeftSocial from "./components/leftSocial";
 import MyExperiences from "./components/myExperiences";
 import OtherProjects from "./components/otherProjects";
 import RightMail from "./components/rightMail";
+import { cn } from "./lib/tailwindCss";
 
 function App() {
   return (
-    <div className="scroll-smooth relative px-6 lg:px-10 min-h-screen bg-primary">
+    <div
+      className={cn(
+        "flex flex-col",
+        "scroll-smooth relative min-h-screen bg-primary",
+      )}
+    >
       <Header />
       <LeftSocial />
       <RightMail />
-      <Landing />
-      <About />
-      <IHaveBuilt />
-      <MyExperiences />
-      {/* <OtherProjects /> */}
-      <Footer />
+      <div className={cn("scroll-smooth", "px-6 lg:px-10")}>
+        <Landing />
+        <About />
+        <IHaveBuilt />
+        <MyExperiences />
+        {/* <OtherProjects /> */}
+        <Footer />
+      </div>
     </div>
   );
 }

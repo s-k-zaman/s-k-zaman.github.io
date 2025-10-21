@@ -1,4 +1,5 @@
 import { MouseEventHandler } from "react";
+import { cn } from "../../lib/tailwindCss";
 
 type Btn = {
   name: string;
@@ -59,7 +60,15 @@ function Header() {
     }
   };
   return (
-    <div className="font-minecraft text-primary-text flex flex-row items-baseline justify-between py-5">
+    <header
+      className={cn(
+        "bg-primary shadow z-20",
+        "px-6 lg:px-10",
+        "sticky top-0",
+        "flex flex-row items-baseline justify-between py-5",
+        "font-minecraft text-primary-text",
+      )}
+    >
       <div>
         <a className="hidden lg:block" href="/">
           S-K-ZAMAN
@@ -71,7 +80,7 @@ function Header() {
         {/* <Btn asLink href="#about-me" name="About" /> */}
         <Btn name="Resume" primary onClick={handleCVDownload} />
       </div>
-    </div>
+    </header>
   );
 }
 
