@@ -92,7 +92,15 @@ function IHaveBuilt() {
         <FeatureProject
           title="Twitter(X) Feed Scraper Bot"
           reversed
-          images={[]}
+          images={[
+            {
+              original: "/featured/x-feed-scraper.png",
+              alt: "x-feed-scraper",
+              width: 1322,
+              height: 939,
+              caption: "features",
+            },
+          ]}
           description={
             <>
               A Python-based web scraper for extracting posts from Twitter (X)
@@ -166,7 +174,15 @@ function IHaveBuilt() {
         />
         <FeatureProject
           title="Stealthwriter Humnaizer"
-          images={[]}
+          images={[
+            {
+              original: "/featured/stealthwriter-humanizer.png",
+              alt: "stealthwriter-humanizer",
+              width: 1311,
+              height: 870,
+              caption: "features",
+            },
+          ]}
           description={
             <>
               A Python semi-automation tool that humanizes text in Word (.docx)
@@ -181,7 +197,15 @@ function IHaveBuilt() {
         />
         <FeatureProject
           title="Casemine Scraper"
-          images={[]}
+          images={[
+            {
+              original: "/featured/casemine-scraper.png",
+              alt: "casemine-scraper",
+              width: 1311,
+              height: 870,
+              caption: "features",
+            },
+          ]}
           reversed
           description={
             <>
@@ -205,7 +229,15 @@ function IHaveBuilt() {
         />
         <FeatureProject
           title="Zara Products Scraper"
-          images={[]}
+          images={[
+            {
+              original: "/featured/zara-scraper.png",
+              alt: "zara-data-scraper",
+              width: 1311,
+              height: 870,
+              caption: "features",
+            },
+          ]}
           description={
             <>
               A Python script that scrapes Zara's website to download
@@ -229,7 +261,15 @@ function IHaveBuilt() {
         <FeatureProject
           reversed
           title="X(Previously Twitter) Mention Reply Bot"
-          images={[]}
+          images={[
+            {
+              original: "/featured/twitter-mention-reply.png",
+              alt: "twitter-mention-reply",
+              width: 1311,
+              height: 870,
+              caption: "features",
+            },
+          ]}
           description={
             <>
               An automated Twitter bot that monitors mentions and replies to
@@ -250,7 +290,15 @@ function IHaveBuilt() {
         />
         <FeatureProject
           title="LinkedIn Mention Reply Bot"
-          images={[]}
+          images={[
+            {
+              original: "/featured/linkedin-mention-reply.png",
+              alt: "linkedin-mention-reply",
+              width: 1311,
+              height: 870,
+              caption: "features",
+            },
+          ]}
           description={
             <>
               An automated bot that monitors LinkedIn mentions and replies to
@@ -265,7 +313,15 @@ function IHaveBuilt() {
         <FeatureProject
           reversed
           title="Product recommend glens"
-          images={[]}
+          images={[
+            {
+              original: "/featured/glens-product-recommend.png",
+              alt: "glens-product-recommend",
+              width: 1311,
+              height: 870,
+              caption: "features",
+            },
+          ]}
           description={
             <>
               A serverless product recommendation system that processes uploaded
@@ -343,6 +399,20 @@ function IHaveBuilt() {
           title="Netflix clone"
           images={[
             {
+              original: "/featured/netflix-clone-2.png",
+              alt: "netflix clone 2",
+              width: 1920,
+              height: 1080,
+              caption: "sign in: firebase",
+            },
+            {
+              original: "/featured/netflix-clone.png",
+              alt: "netflix clone",
+              width: 1920,
+              height: 1080,
+              caption: "landing page on sign in",
+            },
+            {
               original:
                 "https://images.unsplash.com/photo-1637363990764-de84fd247b7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
               alt: "readease",
@@ -364,7 +434,14 @@ function IHaveBuilt() {
         />
         <FeatureProject
           title="XVG to CSV"
-          images={[]}
+          images={[
+            {
+              original: "/featured/xvg-csv.png",
+              alt: "xvg-to-csv",
+              width: 1359,
+              height: 1044,
+            },
+          ]}
           description={
             <>
               A simple script to convert gromacs(used in molecular simulation)
