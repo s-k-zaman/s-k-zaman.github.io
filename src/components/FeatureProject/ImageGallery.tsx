@@ -3,6 +3,7 @@ import type { GalleryProps } from "react-photoswipe-gallery";
 import "photoswipe/dist/photoswipe.css";
 import { DataSourceArray } from "photoswipe";
 import { cn } from "../../lib/tailwindCss";
+import { IoIosImages } from "react-icons/io";
 
 export type Image = {
   original: string;
@@ -210,11 +211,14 @@ export default function ImageGallery({
                 <div
                   className={cn(
                     "absolute bottom-2 right-2",
-                    "bg-black/60 px-2 py-1",
+                    "bg-black/90 px-2 py-1",
                     "rounded-full text-sm text-white",
+                    "flex items-center gap-2",
+                    "shadow-sm shadow-white/50",
                   )}
                 >
-                  +{images.length - 1} more
+                  <span className="font-bold">+{images.length - 1}</span>
+                  <IoIosImages size={18} className="" />
                 </div>
               )}
             </div>

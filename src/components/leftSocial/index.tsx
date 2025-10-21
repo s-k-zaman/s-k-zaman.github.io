@@ -1,4 +1,5 @@
-import { FiLinkedin, FiGithub, FiTwitter } from "react-icons/fi";
+import { FiLinkedin, FiGithub } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
 
 function LeftSocial() {
   return (
@@ -10,7 +11,7 @@ function LeftSocial() {
         <FiLinkedin className="hover:text-white cursor-pointer" size={20} />
       </a>
       <a href="https://twitter.com/s_k_zaman" target={"_blank"}>
-        <FiTwitter className="hover:text-white cursor-pointer" size={20} />
+        <FaXTwitter className="hover:text-white cursor-pointer" size={20} />
       </a>
       <div className="border-[2px] border-primary-bar h-[190px] w-0"></div>
     </div>

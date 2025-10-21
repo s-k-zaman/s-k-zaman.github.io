@@ -8,11 +8,11 @@
 - [x] modals/dialog should close on back button.
 - [x] images gallery should close on back button.
 - [x] make bg dark in mobiles for image gallery view.
-- [ ] make readable contents smaller. 
 - [x] add sticky header.
 - [x] have nav sections
-- [ ] add icon to: +1more image
-- [ ] update twitter icon to X icon.
+- [x] add icon to: +1more image
+- [x] update twitter icon to X icon.
+- [ ] make readable contents smaller. 
 
 # BUGs
 - [x] opening two dialog after reloading when named dialog is already open(same named dialog was present.)
