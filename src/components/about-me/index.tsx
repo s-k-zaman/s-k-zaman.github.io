@@ -31,9 +31,10 @@ function About() {
             <p>Here are a few technologies I’ve been working with recently:</p>
             <ul className="font-montserrat mt-1 flex flex-wrap [&>*]:w-[40%] items-center justify-center">
               <li>Go</li>
+              <li>AI/ML</li>
               <li>NextJs</li>
               <li>Python automation</li>
-              <li>NodeJs</li>
+              {/* <li>NodeJs</li> */}
             </ul>
           </div>
         </div>

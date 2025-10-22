@@ -35,12 +35,12 @@ function IHaveBuilt() {
           ]}
           description={
             <>
-              A simple CLI tool for managing Project wise TODO lists in Markdown
+              A simple CLI tool for managing Project wise TODOs in Markdown
               format.
               <br />
               Works great with <HL>tmux</HL> integration and <HL>neovim</HL>.
               <br />
-              Edit TODOs, Add a tasks, Specify custom file.
+              Edit TODOs, Add a tasks, Specify custom tmux windows.
             </>
           }
           disclaimer={<>Works best on Linux — still in active development</>}
@@ -83,10 +83,11 @@ function IHaveBuilt() {
             <>
               A sophisticated Python-based tool for academic document
               processing, leveraging advanced NLP techniques with spaCy to
-              extract structured metadata from PDF documents. It converts PDFs
-              to TEI XML using Grobid, parses and enriches the data, and outputs
-              in JATS or Elsevier XML formats for seamless integration into
-              publishing workflows.
+              extract structured metadata from PDF documents.
+              <br />
+              It converts <HL>PDFs</HL> to TEI XML using Grobid, parses and
+              enriches the data, and outputs in JATS or Elsevier XML formats for
+              seamless integration into <HL>publishing</HL> workflows.
             </>
           }
           disclaimer={
@@ -124,9 +125,12 @@ function IHaveBuilt() {
           description={
             <>
               A Python-based web scraper for extracting posts from Twitter (X)
-              feeds using Selenium and Flask. This tool automates the process of
-              logging into Twitter and scraping recent posts from the home
-              timeline.
+              feeds using Selenium and Flask.
+              <br />
+              This tool <HL>automates</HL> the process of logging into Twitter
+              and scraping <HL>recent posts</HL> from the home <HL>timeline</HL>
+              .
+              <br />
             </>
           }
           disclaimer={
@@ -167,6 +171,8 @@ function IHaveBuilt() {
             <>
               Landing page for a muni, The intelligent AI agent built to
               streamline municipal services.
+              <br />
+              NextJs demo project
             </>
           }
           tools={["NextJs", "tailwindCSS", "Figma Design"]}
@@ -187,9 +193,13 @@ function IHaveBuilt() {
           description={
             <>
               A Python-based application for automating meal tracking,
-              budgeting, and charge calculations for hostels. This system
-              simplifies the management of boarder meals, guest meals, deposits,
-              and expenses using Excel spreadsheets as the data backend.
+              budgeting, and charge calculations for hostels.
+              <br />
+              This system simplifies the management of boarder meals, guest
+              meals, deposits, and expenses using <HL>Excel spreadsheet</HL> as
+              the data backend.
+              <br />
+              <HL>Auto-calculate</HL> meals for day and night time.
             </>
           }
           disclaimer={<>Used and works best for hostel messes in India</>}
@@ -211,8 +221,11 @@ function IHaveBuilt() {
             <>
               A Python semi-automation tool that humanizes text in Word (.docx)
               documents using the StealthWriter.ai web service via Selenium
-              browser automation. Helpful for content writers, academic writers
-              processing large and multiple files in a day.
+              browser automation.
+              <br />
+              Helpful for <HL>content writers</HL>, <HL>academic writers</HL>{" "}
+              processing large and
+              <HL> multiple files </HL>in a day.
             </>
           }
           disclaimer={
@@ -221,7 +234,7 @@ function IHaveBuilt() {
               StealthWriter.ai's terms of service.
             </>
           }
-          tools={["python", "automation", "selenium"]}
+          tools={["python", "automation", "selenium", "Producer–Consumer Algo"]}
           github="https://github.com/s-k-zaman/stealthwriter-humanizer.git"
           privateGithub
         />
@@ -240,10 +253,12 @@ function IHaveBuilt() {
           description={
             <>
               A Python-based web scraper for Casemine, a platform providing
-              access to judgments and orders from high courts across India. This
-              tool automates the process of downloading legal documents,
-              handling CAPTCHAs, and managing large-scale data extraction very
-              fast(parallel download).
+              access to <HL>judgments</HL> and <HL>orders</HL> from{" "}
+              <HL>high courts</HL> across India.
+              <br />
+              This tool automates the process of downloading legal documents,
+              handling CAPTCHAs, and managing <HL>large-scale data</HL>{" "}
+              extraction very fast(parallel download).
             </>
           }
           disclaimer={
@@ -279,8 +294,9 @@ function IHaveBuilt() {
             <>
               A Python script that scrapes Zara's website to download
               high-quality product images. It uses Selenium for browser
-              automation to navigate product pages and extract images, handling
-              multiple color variants.
+              automation to navigate product pages and <HL>extract images</HL>,
+              handling
+              <HL> multiple color</HL> variants.
             </>
           }
           disclaimer={<>Use responsibly and respect Zara's terms of service</>}
@@ -310,8 +326,8 @@ function IHaveBuilt() {
           ]}
           description={
             <>
-              An automated Twitter bot that monitors mentions and replies to
-              them using Selenium browser automation.
+              An automated Twitter bot that <HL>monitors</HL> mentions and
+              replies to them using Selenium browser automation.
             </>
           }
           disclaimer={
@@ -345,9 +361,9 @@ function IHaveBuilt() {
           ]}
           description={
             <>
-              An automated bot that monitors LinkedIn mentions and replies to
-              them intelligently, helping you maintain engagement on the
-              platform.
+              An automated bot that <HL>monitors</HL> LinkedIn mentions and
+              replies to them intelligently, helping you maintain engagement on
+              the platform.
             </>
           }
           disclaimer={
