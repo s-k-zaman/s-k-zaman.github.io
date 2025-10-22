@@ -1,3 +1,4 @@
+import { RESUME_NAME, RESUME_PATH } from "../../lib/downloadResources";
 import { Btn } from "../header";
 import OtherProject from "../otherProject";
 import Showcase from "../showcase";
@@ -6,9 +7,9 @@ import TitleWithBar from "../titleWithBar";
 
 function MyExperiences() {
   const handleCVDownload = async () => {
-    const fileName = "s-k-zaman_CV.pdf";
+    const fileName = RESUME_NAME;
     try {
-      const response = await fetch("/downloads/khairul-cv.pdf");
+      const response = await fetch(RESUME_PATH);
       const blob = await response.blob();
       const fileUrl = window.URL.createObjectURL(blob);
       let alink = document.createElement("a");

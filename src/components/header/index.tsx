@@ -1,5 +1,6 @@
 import { MouseEventHandler } from "react";
 import { cn } from "../../lib/tailwindCss";
+import { RESUME_NAME, RESUME_PATH } from "../../lib/downloadResources";
 
 type Btn = {
   name: string;
@@ -47,9 +48,9 @@ function Btn({ name, asLink, href, primary, focus, onClick }: Btn) {
 
 function Header() {
   const handleCVDownload = async () => {
-    const fileName = "s-k-zaman_CV.pdf";
+    const fileName = RESUME_NAME;
     try {
-      const response = await fetch("/downloads/khairul-cv.pdf");
+      const response = await fetch(RESUME_PATH);
       const blob = await response.blob();
       const fileUrl = window.URL.createObjectURL(blob);
       let alink = document.createElement("a");
