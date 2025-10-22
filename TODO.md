@@ -17,7 +17,7 @@
 - [x] center align about me section text.
 - [x] FIX: hovering doing layout shift in <Btn></Btn> landing/index.tsx 
 - [x] add sliding reveal animation to the name.
-- [ ] review projects descriptions.
+- [x] review projects descriptions.
 - [ ] get icons for each tools being used(use map feature).
 
 # BUGs
