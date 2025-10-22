@@ -13,15 +13,16 @@ type Btn = {
 function Btn({ name, asLink, href, primary, focus, onClick }: Btn) {
   return asLink ? (
     <a
-      className={`${
+      className={cn(
+        `flex items-center font-minecraft ease-in-out transition-all`,
         primary
           ? "text-primary-text border-[1.5px] border-primary-text rounded-[10px] px-[10px] py-[5px] lg:px-[20px] lg:py-[10px] hover:text-primary hover:bg-primary-text"
-          : "hover:border-b-2 border-primary-text"
-      } ${
+          : "shover:border-b-2 border-primary-text",
+        !focus && primary && "border-b-2",
         focus
           ? "text-primary border-[1.5px] border-primary-text rounded-[10px] px-[10px] py-[5px] lg:px-[20px] lg:py-[10px] bg-primary-text hover:scale-105 active:scale-95"
-          : "hover:border-b-2 border-primary-text"
-      } flex items-center font-minecraft ease-in-out transition-all`}
+          : "hover:border-b-2 border-primary-text", //hover border causing layout shift issue...(fix: use cva)
+      )}
       href={href || "#"}
     >
       {name}
@@ -31,11 +32,11 @@ function Btn({ name, asLink, href, primary, focus, onClick }: Btn) {
       className={`${
         primary
           ? "text-primary-text border-[1.5px] border-primary-text rounded-[10px] px-[20px] py-[10px] hover:text-primary hover:bg-primary-text"
-          : "hover:border-b-2 border-primary-text"
+          : "shover:border-b-2 border-primary-text" //hover border causing layout shift issue...(fix: use cva)
       } ${
         focus
           ? "text-primary border-[1.5px] border-primary-text rounded-[10px] px-[20px] py-[10px] bg-primary-text hover:scale-105 active:scale-95"
-          : "hover:border-b-2 border-primary-text"
+          : "shover:border-b-2 border-primary-text" //hover border causing layout shift issue...(fix: use cva)
       } font-minecraft ease-in-out transition-all`}
       onClick={onClick}
     >

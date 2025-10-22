@@ -15,7 +15,7 @@
 - [x] make readable contents smaller. 
 - [x] change contact section text.
 - [x] center align about me section text.
-- [ ] FIX: hovering doing layout shift in <Btn></Btn> landing/index.tsx 
+- [x] FIX: hovering doing layout shift in <Btn></Btn> landing/index.tsx 
 - [ ] review projects descriptions.
 - [ ] add sliding reveal animation to the name.
 - [ ] get icons for each tools being used(use map feature).
