@@ -1,6 +1,11 @@
-.image_container {
+.container {
   --image-width: 220.5px;
   --image-height: 297px;
+}
+.text_container{
+    min-height: var(--image-height);
+}
+.image_container {
   flex-shrink: 0;
   flex-basis: var(--image-width);
   height: var(--image-height);

@@ -7,22 +7,23 @@ function Footer() {
   return (
     <Showcase id="get-in-touch">
       <div className="flex flex-col gap-[20px] pb-16 lg:pb-[110px]">
-        <p className="mx-auto w-fit text-primary-text">What's Next</p>
+        <p className="mx-auto w-fit text-primary-text">Connect</p>
         <h2 className="w-fit mx-auto text-secondary-text text-2xl lg:text-4xl font-semibold">
-          Get In Touch
+          Let’s Build Something Great
         </h2>
         <p className="text-secondary-dark text-lg lg:text-xl text-center">
-          I am currently{" "}
+          I’m{" "}
           <span className="font-medium text-white/80 ">
-            looking for new opportunities
+            open to new opportunities
           </span>{" "}
-          and open to exciting career prospects. If you have a position that
-          aligns with my skill set and experience,{" "}
-          <span className="font-montserrat underline">
-            I would love to hear from you
-          </span>
-          . Feel free to reach out to me with any questions or opportunities
-          that you think would be a good fit.
+          where I can build, automate, or improve real-world systems. Whether
+          it’s a full-stack product, a developer tool, or a workflow automation
+          — I’d love to contribute my skills and grow with a team that values
+          clean engineering and practical problem-solving.
+          <br />
+          <br />
+          Feel free to reach out if you think I’d be a good fit, or just to say
+          hi.
         </p>
         <div className="flex flex-col items-center justify-center mt-[10px]">
           <p className="text-primary-text font-minecraft">Let's Talk</p>

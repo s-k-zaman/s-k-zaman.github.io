@@ -12,7 +12,12 @@
 - [x] have nav sections
 - [x] add icon to: +1more image
 - [x] update twitter icon to X icon.
-- [ ] make readable contents smaller. 
+- [x] make readable contents smaller. 
+- [x] change contact section text.
+- [x] center align about me section text.
+- [ ] FIX: hovering doing layout shift in <Btn></Btn> landing/index.tsx 
+- [ ] review projects descriptions.
+- [ ] add sliding reveal animation to the name.
 - [ ] get icons for each tools being used(use map feature).
 
 # BUGs

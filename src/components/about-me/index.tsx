@@ -1,3 +1,4 @@
+import { cn } from "../../lib/tailwindCss";
 import Showcase from "../showcase";
 import TitleWithBar from "../titleWithBar";
 import classes from "./about.module.css";
@@ -7,25 +8,32 @@ function About() {
   return (
     <Showcase id="about-me">
       <TitleWithBar title="About me" />
-      <div className="flex flex-col-reverse gap-[115px] md:flex-row md:gap-11">
-        <div className="basis-full flex flex-col justify-start gap-10">
+      <div
+        className={cn(
+          "flex flex-col-reverse gap-[115px] md:flex-row md:gap-11",
+          classes.container,
+        )}
+      >
+        <div
+          className={cn(
+            "basis-full flex flex-col justify-center gap-10",
+            classes.text_container,
+          )}
+        >
           <p className="text-justify">
-            I take pride in my detail-oriented approach to writing clean and
-            maintainable code that adheres to best practices and standards. As
-            an individual dedicated to self-improvement, I constantly strive to
-            improve my skills and keep up with the latest technologies and
-            trends.
-            <br />I enjoy collaborating with others to achieve high-quality
-            outcomes and recognized for my effective communication and positive
-            approach.
+            I enjoy building things that just work — clean, efficient, and
+            reliable.
+            <br />
+            From full-stack web apps to automation tools, I focus on simplicity
+            and solid engineering.
           </p>
           <div className="text-slate-300/90">
             <p>Here are a few technologies I’ve been working with recently:</p>
             <ul className="font-montserrat mt-1 flex flex-wrap [&>*]:w-[40%] items-center justify-center">
+              <li>Go</li>
               <li>NextJs</li>
-              <li>Typescript</li>
-              <li>ReactJs</li>
-              <li>tailwindCSS</li>
+              <li>Python automation</li>
+              <li>NodeJs</li>
             </ul>
           </div>
         </div>
