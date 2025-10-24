@@ -234,7 +234,7 @@ function IHaveBuilt() {
               StealthWriter.ai's terms of service.
             </>
           }
-          tools={["python", "automation", "selenium", "Producer–Consumer Algo"]}
+          tools={["python", "automation", "selenium"]}
           github="https://github.com/s-k-zaman/stealthwriter-humanizer.git"
           privateGithub
         />
@@ -272,6 +272,7 @@ function IHaveBuilt() {
             "python",
             "automation",
             "selenium",
+            "Producer–Consumer Algo",
             "large-scale data",
             "headless",
             "json",
